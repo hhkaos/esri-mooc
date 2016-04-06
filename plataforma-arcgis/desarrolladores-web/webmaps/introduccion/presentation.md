@@ -1,9 +1,9 @@
 <!-- .slide: class="title" -->
 
 ## Introducción a los webmaps
-[Plataforma ArcGIS para desarrolladores web](https://esri-es.github.io/moocs/plataforma-arcgis/desarrolladores-web/)
+Plataforma ArcGIS para desarrolladores web
 
-[![octocat](../../template/octocat.png)](http://esri-es.github.io/)
+[desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)
 
 ---
 
