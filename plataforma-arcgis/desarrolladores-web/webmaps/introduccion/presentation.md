@@ -1,10 +1,9 @@
 <!-- .slide: class="title" -->
 
 ## Introducción a los webmaps
-### Módulo 2: Webmaps
-Raúl Jiménez - Esri España
+[Plataforma ArcGIS para desarrolladores web](https://esri-es.github.io/moocs/plataforma-arcgis/desarrolladores-web/)
 
-[![octocat](../../template/octocat.png)](https://github.com/ycabon/presentations/tree/gh-pages/2016-devsummit-discover-4.0-the-next-generation)
+[![octocat](../../template/octocat.png)](http://esri-es.github.io/)
 
 ---
 
@@ -107,6 +106,7 @@ todo tipo de usuarios
 * Creación/edición:
   * [ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm), [Portal for ArcGIS](http://server.arcgis.com/en/portal/latest/use/make-your-first-map.htm), [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-web-map.htm) y [API REST](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Add_Item/02r30000008q000000/)
   * APIs, SDKs y AppBuilders (*Próximamente*)
+
 * Consumo:
   * Apps: [ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm), [Portal for ArcGIS](http://server.arcgis.com/en/portal/latest/use/make-your-first-map.htm), [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-web-map.htm), <br>[Operations Dashboard](http://doc.arcgis.com/en/operations-dashboard/windows-desktop/author/faqs-author.htm#anchor17), [Collector](https://doc.arcgis.com/en/collector/android/create-maps/create-and-share-a-collector-map.htm), ...
   * APIs y SDKs: [JavaScript](https://developers.arcgis.com/javascript/jshelp/intro_agstemplate_amd.html), [iOS](https://developers.arcgis.com/ios/swift/guide/viewing-web-map.htm), [Java](https://developers.arcgis.com/java/guide/build-a-web-mapping-app.htm), [Xamarin](https://developers.arcgis.com/xamarin/quartz/forms/guide/open-an-existing-map.htm), [.NET](https://developers.arcgis.com/net/desktop/guide/access-maps-and-content-from-your-portal.htm), ...
@@ -121,6 +121,7 @@ todo tipo de usuarios
 
 * El fichero puede ocupar desde unos pocos <br>
 bytes hasta pocos KB
+
 * Los cambios en un webmap se propagan entre <br>
 todas las aplicaciones que los consuman
 
@@ -130,7 +131,7 @@ todas las aplicaciones que los consuman
 
 ## Preguntas
 
-Para cualquier duda puedes usar los [*Issues* del proyecto](https://github.com/esri-es/moocs/issues) en Github
+Para cualquier duda puedes usar los <br>[*issues* del proyecto](https://github.com/esri-es/moocs/issues) en Github
 
 ---
 
