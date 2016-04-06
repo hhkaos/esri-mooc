@@ -4068,7 +4068,7 @@ todo tipo de usuarios
 * Consumo:
   * Apps: [ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm), [Portal for ArcGIS](http://server.arcgis.com/en/portal/latest/use/make-your-first-map.htm), [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-web-map.htm), <br>[Operations Dashboard](http://doc.arcgis.com/en/operations-dashboard/windows-desktop/author/faqs-author.htm#anchor17), [Collector](https://doc.arcgis.com/en/collector/android/create-maps/create-and-share-a-collector-map.htm), ...
   * APIs y SDKs: [JavaScript](https://developers.arcgis.com/javascript/jshelp/intro_agstemplate_amd.html), [iOS](https://developers.arcgis.com/ios/swift/guide/viewing-web-map.htm), [Java](https://developers.arcgis.com/java/guide/build-a-web-mapping-app.htm), [Xamarin](https://developers.arcgis.com/xamarin/quartz/forms/guide/open-an-existing-map.htm), [.NET](https://developers.arcgis.com/net/desktop/guide/access-maps-and-content-from-your-portal.htm), ...
-  * Plantillas: [aplicaciones configurables](https://www.arcgis.com/home/gallery.html#c=esri&t=apps&o=modified&f=configurable), [storymaps](https://storymaps.arcgis.com/en/), etc.
+  * Plantillas: [aplicaciones configurables](https://www.arcgis.com/home/gallery.html#c=esri&t=apps&o=modified&f=configurable) y [storymaps](https://storymaps.arcgis.com/en/)
   * App Builders: [Web AppBuilder](http://doc.arcgis.com/en/web-appbuilder/create-apps/make-first-app.htm) y [AppStudio](https://appstudio.arcgis.com/#do_more)
 
 ---
