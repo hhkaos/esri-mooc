@@ -34,6 +34,7 @@ popups, opacidad, etc.
 <!-- .slide: class="section" -->
 
 ## Ejemplo: [Metadatos de un webmap](http://www.arcgis.com/sharing/rest/content/items/1a40fa5cc1ab4569b79f45444d728067/data?f=json)
+<small>https://<span style="color:gray">&lt;root-url&gt;</span>/sharing/rest/content/items/<span style="color:gray">&lt;webmap-id&gt;</span>?f=json</small>
 
 ```javascript
 {
@@ -84,6 +85,7 @@ popups, opacidad, etc.
 <!-- .slide: class="section" -->
 
 ## Ejemplo: [Datos de un webmap](http://www.arcgis.com/sharing/rest/content/items/1a40fa5cc1ab4569b79f45444d728067?f=json)
+<small>https://<span style="color:gray">&lt;root-url&gt;</span>/sharing/rest/content/items/<span style="color:gray">&lt;webmap-id&gt;</span>/**data**?f=json</small>
 
 ```javascript
 {
