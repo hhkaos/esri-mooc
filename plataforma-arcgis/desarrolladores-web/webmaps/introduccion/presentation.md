@@ -4091,6 +4091,9 @@ bytes hasta pocos KB
 * Los cambios en un webmap se propagan entre <br>
 todas las aplicaciones que los consuman
 
+* No confundir con la [especificación de exportación<br>
+de webmaps del servicio de impresión](http://resources.arcgis.com/en/help/rest/apiref/index.html?exportwebmap_spec.html).
+
 ---
 
 <!-- .slide: class="questions centered" -->
