@@ -4156,6 +4156,7 @@ de webmaps del servicio de impresión](http://resources.arcgis.com/en/help/rest/
 ## Más referencias:
 * Documentación de la API REST:
 	* [Formato JSON del webmap](http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000)
+	* [Especificación: ExportWebmap](http://server.arcgis.com/es/server/latest/create-web-apps/windows/exportwebmap-specification.htm) para el servicio de impresión
 	* [Items: metadatos, datos, comentarios, valoraciones, etc.](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Item/02r30000007w000000/#GUID-F58D98FE-7CBE-4156-9420-B5F8A8D7619E)
 * Vídeos:
 	* [The webmap (49min)](http://video.esri.com/watch/1966/the-web-map)
