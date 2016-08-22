@@ -17,7 +17,7 @@ Plataforma ArcGIS para desarrolladores web
 <!-- .slide: class="section" -->
 ## Dónde se almacena
 
-> Un webmaps se aloja como **datos de un item** dentro de una cuenta de organización de
+> Un webmaps se aloja como **datos de un [item](https://doc.arcgis.com/en/arcgis-online/reference/geo-info.htm)** dentro de una cuenta de organización de
 	[ArcGIS Online](http://www.esri.com/software/arcgis/arcgisonline) o
 	[Portal for ArcGIS](http://www.esri.com/software/arcgis/arcgisserver/extensions/portal-for-arcgis)
 
@@ -25,7 +25,7 @@ Plataforma ArcGIS para desarrolladores web
 
 <!-- .slide: class="section" -->
 
-## Metadatos de un item
+## [Metadatos de un item](https://doc.arcgis.com/en/arcgis-online/share-maps/metadata.htm)
 
 * Título
 * Descripción
@@ -4093,18 +4093,18 @@ todo tipo de usuarios
 	* [Portal for ArcGIS](http://server.arcgis.com/en/portal/latest/use/make-your-first-map.htm)
 	* [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-web-map.htm)
 
-* [API REST](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Add_Item/02r30000008q000000/) (desarrolladores)<br>
-<small>*Usada por las interfaces anteriores*</small>
-
 * Bibliotecas y SDKs (desarrolladores)<br>
-<small>*Próximamente*</small>
+	* [ArcGIS Runtime Quartz SDKs](https://developers.arcgis.com/web-map-specification/working-with-web-maps/)
+	* ArcGIS API for JavaScript (*Próximamente*)
+	* [API REST](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Add_Item/02r30000008q000000/)<br>
+	<small>*Usada por todas las interfaces anteriores*</small>
 
 ---
 
 <!-- .slide: class="section" -->
 
 ## Consumo
-* Apps: [ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm), [Portal for ArcGIS](http://server.arcgis.com/en/portal/latest/use/make-your-first-map.htm), [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-web-map.htm), <br>[Operations Dashboard](http://doc.arcgis.com/en/operations-dashboard/windows-desktop/author/faqs-author.htm#anchor17), [Collector](https://doc.arcgis.com/en/collector/android/create-maps/create-and-share-a-collector-map.htm), ...
+* Apps: [ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm), [Portal for ArcGIS](http://server.arcgis.com/en/portal/latest/use/make-your-first-map.htm), [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-web-map.htm), <br>[Operations Dashboard](http://doc.arcgis.com/en/operations-dashboard/windows-desktop/author/faqs-author.htm#anchor17), [Collector](https://doc.arcgis.com/en/collector/android/create-maps/create-and-share-a-collector-map.htm), [Navigator](http://doc.arcgis.com/en/navigator/prepare-maps/prepare-maps.htm)...
 
 * APIs y SDKs: [JavaScript](https://developers.arcgis.com/javascript/jshelp/intro_agstemplate_amd.html), [iOS](https://developers.arcgis.com/ios/swift/guide/viewing-web-map.htm), [Java](https://developers.arcgis.com/java/guide/build-a-web-mapping-app.htm), [Xamarin](https://developers.arcgis.com/xamarin/quartz/forms/guide/open-an-existing-map.htm), [.NET](https://developers.arcgis.com/net/desktop/guide/access-maps-and-content-from-your-portal.htm), ...
 
@@ -4143,11 +4143,10 @@ todo tipo de usuarios
 * El fichero puede ocupar desde unos pocos <br>
 bytes hasta pocos KB
 
-* Los cambios en un webmap se propagan entre <br>
-todas las aplicaciones que los consuman
+* Los cambios en un web map se propagan entre <br>
+todas las aplicaciones que lo consuman
 
-* No confundir con la [especificación de exportación<br>
-de webmaps del servicio de impresión](http://resources.arcgis.com/en/help/rest/apiref/index.html?exportwebmap_spec.html).
+* La [especificación de web map que usa el servicio<br> de impresión](http://resources.arcgis.com/en/help/rest/apiref/index.html?exportwebmap_spec.html) **es distinta** a la estándar.
 
 ---
 
@@ -4155,12 +4154,13 @@ de webmaps del servicio de impresión](http://resources.arcgis.com/en/help/rest/
 
 ## Más referencias:
 * Documentación de la API REST:
-	* [Formato JSON del webmap](http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000)
+	* [Web map specification](https://developers.arcgis.com/web-map-specification/)
+	* [Web map format overview](http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000)
 	* [Especificación: ExportWebmap](http://server.arcgis.com/es/server/latest/create-web-apps/windows/exportwebmap-specification.htm) para el servicio de impresión
 	* [Items: metadatos, datos, comentarios, valoraciones, etc.](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Item/02r30000007w000000/#GUID-F58D98FE-7CBE-4156-9420-B5F8A8D7619E)
 * Vídeos:
-	* [The webmap (49min)](http://video.esri.com/watch/1966/the-web-map)
-	* [Esri staff introduce Export Web Map, a new geoprocessing tool (78min)](http://video.esri.com/watch/1963/supporting-high_dash_quality-printing-in-web-applications-with-arcgis-101-for-server)
+	* [The Web map (2012) (49min)](http://video.esri.com/watch/1966/the-web-map)
+	* [Esri staff introduce Export Web Map, <br>a new geoprocessing tool (2012) (78min)](http://video.esri.com/watch/1963/supporting-high_dash_quality-printing-in-web-applications-with-arcgis-101-for-server)
 
 ---
 
