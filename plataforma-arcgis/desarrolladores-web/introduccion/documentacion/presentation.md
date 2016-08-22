@@ -25,7 +25,7 @@ Dominio|Tecnología|Formato|Perfil
 [esri.com/training](http://www.esri.com/training/main)|Todas|Vídeos|Dev & Tec
 [video.esri.com](http://video.arcgis.com/)|Todas|Vídeos|Dev & Tec
 [video.arcgis.com](http://video.arcgis.com/)|Todas|Vídeos|Dev & Tec
-[esri.com/mooc](http://www.esri.com/mooc)|Apps|MOOC|Tec
+[esri.com/mooc](http://www.esri.com/mooc)|Apps & Análisis|MOOC|Tec
 [coursera.org/specializations/gis](https://www.coursera.org/specializations/gis)|GIS|MOOC|Tec
 
 </small>
