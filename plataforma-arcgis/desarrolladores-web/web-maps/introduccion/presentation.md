@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-## Introducción a los webmaps
+## Introducción a los<br>web maps & web scenes
 Plataforma ArcGIS para desarrolladores web
 
 [desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)
@@ -8,16 +8,16 @@ Plataforma ArcGIS para desarrolladores web
 ---
 
 <!-- .slide: class="section" -->
-## Qué es un webmap
-> Es el término usado en la plataforma ArcGIS para denominar la represetanción
-  de un mapa en formato **JSON**
+## Qué es un Web Map/Scene
+> Es el término usado en la plataforma ArcGIS para denominar la representación
+  de un mapa en formato **JSON**: <br>Web Map (2D) y Web Scene (3D)
 
 ---
 
 <!-- .slide: class="section" -->
 ## Dónde se almacena
 
-> Un webmaps se aloja como **datos de un [item](https://doc.arcgis.com/en/arcgis-online/reference/geo-info.htm)** dentro de una cuenta de organización de
+> Se aloja como **datos de un [item](https://doc.arcgis.com/en/arcgis-online/reference/geo-info.htm)** dentro de una cuenta de organización de
 	[ArcGIS Online](http://www.esri.com/software/arcgis/arcgisonline) o
 	[Portal for ArcGIS](http://www.esri.com/software/arcgis/arcgisserver/extensions/portal-for-arcgis)
 
@@ -27,6 +27,7 @@ Plataforma ArcGIS para desarrolladores web
 
 ## [Metadatos de un item](https://doc.arcgis.com/en/arcgis-online/share-maps/metadata.htm)
 
+* [Tipo](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Items_and_item_types/02r3000000ms000000/): Web Map, Web Scene, Document Link	, ...
 * Título
 * Descripción
 * Autor
@@ -95,10 +96,10 @@ https://<span style="color:gray">&lt;root-url&gt;</span>/home/item.html?id=<span
 
 <!-- .slide: class="section" -->
 
-## Información contenida en un webmap
+## Información contenida<br><small>**en un Web Map/Scene**</small>
 
-* **Información de referencia**: mapa base, referencia <br>
-espacial, extensión inicial, etc.
+* **Información de contexto**: mapa base, <br>
+referencia espacial, extensión inicial, etc.
 
 * **Capas operacionales**: URLs de los servicios, orden <br>
 de las capas, simbología/renderizadores, configuración de<br>
@@ -110,7 +111,7 @@ popups, opacidad, etc.
 
 <!-- .slide: class="section" -->
 
-## [Datos de un webmap (de ejemplo)](http://www.arcgis.com/sharing/rest/content/items/1a40fa5cc1ab4569b79f45444d728067?f=json)
+## [Ejemplo de datos contenidos](http://www.arcgis.com/sharing/rest/content/items/1a40fa5cc1ab4569b79f45444d728067?f=json)
 <small>https://<span style="color:gray">&lt;root-url&gt;</span>/sharing/rest/content/items/<span style="color:gray">&lt;item-id&gt;</span>/**data**?f=json</small>
 
 ```javascript
@@ -4106,7 +4107,7 @@ todo tipo de usuarios
 ## Consumo
 * Apps: [ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm), [Portal for ArcGIS](http://server.arcgis.com/en/portal/latest/use/make-your-first-map.htm), [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-web-map.htm), <br>[Operations Dashboard](http://doc.arcgis.com/en/operations-dashboard/windows-desktop/author/faqs-author.htm#anchor17), [Collector](https://doc.arcgis.com/en/collector/android/create-maps/create-and-share-a-collector-map.htm), [Navigator](http://doc.arcgis.com/en/navigator/prepare-maps/prepare-maps.htm)...
 
-* APIs y SDKs: [JavaScript](https://developers.arcgis.com/javascript/jshelp/intro_agstemplate_amd.html), [iOS](https://developers.arcgis.com/ios/swift/guide/viewing-web-map.htm), [Java](https://developers.arcgis.com/java/guide/build-a-web-mapping-app.htm), [Xamarin](https://developers.arcgis.com/xamarin/quartz/forms/guide/open-an-existing-map.htm), [.NET](https://developers.arcgis.com/net/desktop/guide/access-maps-and-content-from-your-portal.htm), ...
+* APIs y SDKs: [JavaScript](https://developers.arcgis.com/javascript/jshelp/intro_agstemplate_amd.html), [Android](https://developers.arcgis.com/android/beta/guide/display-a-map-or-scene.htm), [iOS](https://developers.arcgis.com/ios/swift/guide/viewing-web-map.htm), [Java](https://developers.arcgis.com/java/guide/build-a-web-mapping-app.htm), <br> [Xamarin](https://developers.arcgis.com/xamarin/quartz/android/guide/open-an-existing-map.htm), [.NET](https://developers.arcgis.com/net/quartz/wpf/guide/display-a-map-or-scene.htm), [Qt](https://developers.arcgis.com/qt/quartz/qml/guide/display-a-map-or-scene.htm), [OS X](https://developers.arcgis.com/os-x/quartz/swift/guide/display-a-map-or-scene.htm)...
 
 * Plantillas: [aplicaciones configurables](https://www.arcgis.com/home/gallery.html#c=esri&t=apps&o=modified&f=configurable) y [storymaps](https://storymaps.arcgis.com/en/)
 
@@ -4115,16 +4116,18 @@ todo tipo de usuarios
 ---
 
 <!-- .slide: class="section" -->
-## Cómo abrir un webmap (opciones)
+## Cómo abrir web map / scene (opciones)
 
-1) Desde la sección "**Mi contenido**" de mi organización; elementos con tipo
-"**Web Map**"
 
-![my-content](../../images/my-content.png)
 
-2) Buscando en ArcGIS.com
+* Desde la sección "**Mi contenido**" de mi organización<br>
+   <small>Desplegable -> "Open in Map/Scene Viewer"</small>
 
-3) En Pro dónde?
+* Página de detalles de ArcGIS Online: [Web Map](https://www.arcgis.com/home/item.html?id=e691172598f04ea8881cd2a4adaa45ba) y [Web Scene](https://www.arcgis.com/home/item.html?id=3a9976baef9240ab8645ee25c7e9c096)
+
+* Desde ArcMap: [File -> ArcGIS Online](http://desktop.arcgis.com/en/arcmap/10.3/map/web-maps-and-services/using-arcgis-online-in-desktop.htm#ESRI_SECTION1_A3E835A978AA4EA6A89A027C3F05184A)
+
+* Desde ArcGIS Pro: [Project -> Portal](http://pro.arcgis.com/en/pro-app/help/projects/add-maps-to-a-project.htm#ESRI_SECTION1_C6B961338BCD4717827BF2A30E721618)
 
 ---
 
@@ -4146,7 +4149,7 @@ bytes hasta pocos KB
 * Los cambios en un web map se propagan entre <br>
 todas las aplicaciones que lo consuman
 
-* La [especificación de web map que usa el servicio<br> de impresión](http://resources.arcgis.com/en/help/rest/apiref/index.html?exportwebmap_spec.html) **es distinta** a la estándar.
+* La [especificación del Web Map que usa el servicio<br> de impresión](http://resources.arcgis.com/en/help/rest/apiref/index.html?exportwebmap_spec.html) **es distinta** a la estándar.
 
 ---
 
@@ -4154,12 +4157,12 @@ todas las aplicaciones que lo consuman
 
 ## Más referencias:
 * Documentación de la API REST:
-	* [Web map specification](https://developers.arcgis.com/web-map-specification/)
-	* [Web map format overview](http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000)
+	* [Web Map specification](https://developers.arcgis.com/web-map-specification/)
+	* [Web Map format overview](http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000)
 	* [Especificación: ExportWebmap](http://server.arcgis.com/es/server/latest/create-web-apps/windows/exportwebmap-specification.htm) para el servicio de impresión
 	* [Items: metadatos, datos, comentarios, valoraciones, etc.](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Item/02r30000007w000000/#GUID-F58D98FE-7CBE-4156-9420-B5F8A8D7619E)
 * Vídeos:
-	* [The Web map (2012) (49min)](http://video.esri.com/watch/1966/the-web-map)
+	* [The web map (2012) (49min)](http://video.esri.com/watch/1966/the-web-map)
 	* [Esri staff introduce Export Web Map, <br>a new geoprocessing tool (2012) (78min)](http://video.esri.com/watch/1963/supporting-high_dash_quality-printing-in-web-applications-with-arcgis-101-for-server)
 
 ---
