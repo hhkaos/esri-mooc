@@ -10,6 +10,19 @@ Plataforma ArcGIS para desarrolladores web
 <!-- .slide: class="section" -->
 ## Objetivos
 
+
+* Repos:
+  * [Developer-Support](https://github.com/Esri/developer-support) (WAB, Leaflet, etc)
+
+  * Ejemplos:  
+
+  * [codesharing.arcgis.com](http://codesharing.arcgis.com/)
+* Youtube
+* [Rene Rubalcava](https://www.youtube.com/channel/UCo7tc3KZgH4GMUcqcSFBLOQ/videos)
+* Esri España Repos:
+  * [](http://esri-es.github.io/Web-AppBuilder-Custom-Widgets/)
+  * [API JavaScript](http://esri-es.github.io/JavascriptAPI/)
+
 ---
 
 
