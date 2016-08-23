@@ -32,7 +32,7 @@ Plataforma ArcGIS para desarrolladores web
   "bookmarks": [],
   "applicationProperties": {},
   "presentation": {},
-  "table": {},
+  "tables": [],
   "widget": {}
 }
 ```

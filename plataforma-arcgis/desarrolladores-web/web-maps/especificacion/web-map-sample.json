@@ -710,7 +710,7 @@
     }
     // -> Existe el campo editing: específico para collector (tracking de ubicación)
   },
-  // -> presentation: aparecería en caso de crear una presentación
-  // -> table: para los webmaps con servicioss que tienen tablas asociadas (por ej: http://arcg.is/2bdywUF)
-  // -> widget: de momento sólo el timeSlide (por ej: http://arcg.is/2beVSeb)
+  // -> presentation: {} aparecería en caso de crear una presentación
+  // -> tables: [] para los webmaps con servicioss que tienen tablas asociadas (por ej: http://arcg.is/2bdywUF)
+  // -> widgets: {} de momento sólo el timeSlide (por ej: http://arcg.is/2beVSeb)
 }
