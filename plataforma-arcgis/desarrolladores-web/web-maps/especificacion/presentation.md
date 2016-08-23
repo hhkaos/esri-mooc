@@ -37,7 +37,7 @@ Plataforma ArcGIS para desarrolladores web
 }
 ```
 
-> Ver: [web-map-sample.json](web-map-sample.json)
+> Ver: [web map original](https://www.arcgis.com/sharing/rest/content/items/7d987ba67f4640f0869acb82ba064228/data?f=json) | [comentado](web-map-sample.json)
 
 ---
 
