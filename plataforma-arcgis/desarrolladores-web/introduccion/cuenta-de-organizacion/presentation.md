@@ -76,5 +76,13 @@ Plataforma ArcGIS para desarrolladores web
 
 ---
 
+<!-- .slide: class="questions centered" -->
+
+## Preguntas
+
+Para cualquier duda puedes usar los <br>[*issues* del proyecto](https://github.com/esri-es/moocs/issues) en Github
+
+---
+
 
 <!-- .slide: class="end" -->
