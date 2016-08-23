@@ -1,0 +1,1407 @@
+{
+	"operationalLayers": [{
+		"title": "Sun Exposure at 10:00",
+		"id": "14a50ac5194-layer22",
+		"layerType": "GroupLayer",
+		"visibility": true,
+		"opacity": 1,
+		"visibilityMode": "inherited",
+		"listMode": "hide-children",
+		"layers": [{
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/14",
+			"title": "Shadow Extent 10:00",
+			"id": "ab80743d4f8f44099a6183dfbe376cc6",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "LineSymbol3D",
+							"symbolLayers": [{
+								"type": "Line",
+								"size": 4,
+								"material": {
+									"color": [255, 255, 0],
+									"transparency": 0
+								}
+							}]
+						},
+						"label": "",
+						"description": ""
+					}
+				},
+				"elevationInfo": {
+					"mode": "onTheGround"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			}
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/9",
+			"title": "shadowLabelPt_10am210614",
+			"id": "5b5e48a34b2742d4a066415a5b114f9f",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 6,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "relativeToGround",
+					"featureExpression": {
+						"value": 0
+					}
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			},
+			"showLabels": true
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/4",
+			"title": "Sun Locations 10:00",
+			"id": "584b5c03e9a04cc993c152464a12a839",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 100,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "absoluteHeight"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": [],
+				"fieldInfos": [{
+					"fieldName": "Sun_Time",
+					"visible": true,
+					"isEditable": true,
+					"label": "Sun Time Label"
+				}]
+			},
+			"showLabels": true
+		}]
+	}, {
+		"title": "Sun Exposure at 10:15",
+		"id": "14a50ac4f12-layer21",
+		"layerType": "GroupLayer",
+		"visibility": true,
+		"opacity": 1,
+		"visibilityMode": "inherited",
+		"listMode": "hide-children",
+		"layers": [{
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/13",
+			"title": "Shadow Extent 10:15",
+			"id": "ac2175a264814cd6936dd854d5bca88b",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "LineSymbol3D",
+							"symbolLayers": [{
+								"type": "Line",
+								"size": 4,
+								"material": {
+									"color": [255, 255, 0],
+									"transparency": 0
+								}
+							}]
+						},
+						"label": "",
+						"description": ""
+					}
+				},
+				"elevationInfo": {
+					"mode": "onTheGround"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			}
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/8",
+			"title": "shadowLabelPt_1015am210614",
+			"id": "979cc2b9902144758051c8263f535f05",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 6,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "relativeToGround",
+					"featureExpression": {
+						"value": 0
+					}
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			},
+			"showLabels": true
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/3",
+			"title": "Sun Locations 10:15",
+			"id": "ca6d0b3e05f74b5c9058bd4f2a48f564",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 100,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "absoluteHeight"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": [],
+				"fieldInfos": [{
+					"fieldName": "Sun_Time",
+					"visible": true,
+					"isEditable": true,
+					"label": "Sun Time Label"
+				}]
+			},
+			"showLabels": true
+		}]
+	}, {
+		"title": "Sun Exposure at 10:30",
+		"id": "14a50ac49a8-layer20",
+		"layerType": "GroupLayer",
+		"visibility": true,
+		"opacity": 1,
+		"visibilityMode": "inherited",
+		"listMode": "hide-children",
+		"layers": [{
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/12",
+			"title": "Shadow Extent 10:30",
+			"id": "c5677c8dd2a340318632232070ed63d1",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "LineSymbol3D",
+							"symbolLayers": [{
+								"type": "Line",
+								"size": 4,
+								"material": {
+									"color": [255, 255, 0],
+									"transparency": 0
+								}
+							}]
+						},
+						"label": "",
+						"description": ""
+					}
+				},
+				"elevationInfo": {
+					"mode": "onTheGround"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			}
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/7",
+			"title": "shadowLabelPt_1030am210614",
+			"id": "77ca43e3258741358cd0ba5d226357b7",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 6,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "relativeToGround",
+					"featureExpression": {
+						"value": 0
+					}
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			},
+			"showLabels": true
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/2",
+			"title": "Sun Locations 10:30",
+			"id": "c6ade4bb1ae6411db1ee70758a683c9b",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 100,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "absoluteHeight"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": [],
+				"fieldInfos": [{
+					"fieldName": "Sun_Time",
+					"visible": true,
+					"isEditable": true,
+					"label": "Sun Time Label"
+				}]
+			},
+			"showLabels": true
+		}]
+	}, {
+		"title": "Sun Exposure at 10:45",
+		"id": "14a50ac30c9-layer19",
+		"layerType": "GroupLayer",
+		"visibility": true,
+		"opacity": 1,
+		"visibilityMode": "inherited",
+		"listMode": "hide-children",
+		"layers": [{
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/11",
+			"title": "Shadow Extent 10:45",
+			"id": "67739b50e6a549de9ca3a3ed9e1a77aa",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "LineSymbol3D",
+							"symbolLayers": [{
+								"type": "Line",
+								"size": 4,
+								"material": {
+									"color": [255, 255, 0],
+									"transparency": 0
+								}
+							}]
+						},
+						"label": "",
+						"description": ""
+					}
+				},
+				"elevationInfo": {
+					"mode": "onTheGround"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			}
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/6",
+			"title": "shadowLabelPt_1045am210614",
+			"id": "098b437b64764cf29c1df4571c383105",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 6,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "relativeToGround",
+					"featureExpression": {
+						"value": 0
+					}
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			},
+			"showLabels": true
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/1",
+			"title": "Sun Locations 10:45",
+			"id": "59c6a074b31b4ff3aa2c8a93b93f0da9",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 100,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "absoluteHeight"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": [],
+				"fieldInfos": [{
+					"fieldName": "Sun_Time",
+					"visible": true,
+					"isEditable": true,
+					"label": "Sun Time Label"
+				}]
+			},
+			"showLabels": true
+		}]
+	}, {
+		"title": "Sun Exposure at 11:00",
+		"id": "14a50ac2b37-layer18",
+		"layerType": "GroupLayer",
+		"visibility": true,
+		"opacity": 1,
+		"visibilityMode": "inherited",
+		"listMode": "hide-children",
+		"layers": [{
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/10",
+			"title": "Shadow Extent 11:00",
+			"id": "fea023f62f554021a8a783612ff69567",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "LineSymbol3D",
+							"symbolLayers": [{
+								"type": "Line",
+								"size": 4,
+								"material": {
+									"color": [255, 255, 0],
+									"transparency": 0
+								}
+							}]
+						},
+						"label": "",
+						"description": ""
+					}
+				},
+				"elevationInfo": {
+					"mode": "onTheGround"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			}
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/5",
+			"title": "shadowLabelPt_11am210614",
+			"id": "e3c2ee6fdfee4801b5316196f17f861d",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 6,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "relativeToGround",
+					"featureExpression": {
+						"value": 0
+					}
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": []
+			},
+			"showLabels": true
+		}, {
+			"url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WinterSunExposer3_WFL/FeatureServer/0",
+			"title": "Sun Locations 11:00",
+			"id": "d45ecff737334da2ba876c50b3107e03",
+			"layerType": "ArcGISFeatureLayer",
+			"visibility": true,
+			"opacity": 1,
+			"layerDefinition": {
+				"drawingInfo": {
+					"renderer": {
+						"type": "simple",
+						"symbol": {
+							"type": "styleSymbolReference",
+							"styleName": "EsriThematicShapesStyle",
+							"name": "Centered Sphere"
+						},
+						"label": "",
+						"description": "",
+						"visualVariables": [{
+							"type": "sizeInfo",
+							"minSize": 100,
+							"axis": "all",
+							"valueUnit": "meters"
+						}, {
+							"type": "colorInfo",
+							"stops": [{
+								"color": [255, 255, 0]
+							}]
+						}]
+					}
+				},
+				"elevationInfo": {
+					"mode": "absoluteHeight"
+				}
+			},
+			"popupInfo": {
+				"mediaInfos": [],
+				"fieldInfos": [{
+					"fieldName": "Sun_Time",
+					"visible": true,
+					"isEditable": true,
+					"label": "Sun Time Label"
+				}]
+			},
+			"showLabels": true
+		}]
+	}, {
+		"url": "http://tiles.arcgis.com/tiles/f2L9BNb7FaGJkvSP/arcgis/rest/services/QueenstownBasemap/MapServer",
+		"title": "QueenstownBasemap",
+		"id": "154697abd01-layer-30",
+		"layerType": "ArcGISTiledMapServiceLayer",
+		"visibility": false,
+		"opacity": 1,
+		"itemId": "3c21536d71f348d88b56aa7595e339a9"
+	}],
+	"baseMap": {
+		"id": "basemap",
+		"title": "Imagery",
+		"baseMapLayers": [{
+			"id": "154697c1643-layer-46",
+			"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+			"layerType": "ArcGISTiledMapServiceLayer"
+		}],
+		"elevationLayers": [{
+			"id": "globalElevation_0",
+			"url": "http://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer",
+			"layerType": "ArcGISTiledElevationServiceLayer"
+		}]
+	},
+	"version": "1.3",
+	"authoringApp": "WebSceneViewer",
+	"authoringAppVersion": "4.1.0.0",
+	"spatialReference": {
+		"wkid": 102100,
+		"latestWkid": 3857
+	},
+	"viewingMode": "global",
+	"initialState": {
+		"viewpoint": {
+			"scale": 19042.186477069674,
+			"rotation": 7.8618070181435655,
+			"targetGeometry": {
+				"x": 1.877499050792088E7,
+				"y": -5625043.891640251,
+				"spatialReference": {
+					"wkid": 102100,
+					"latestWkid": 3857
+				},
+				"z": 380.8252416094765
+			},
+			"camera": {
+				"position": {
+					"x": 1.8775736898109693E7,
+					"y": -5630450.952805846,
+					"spatialReference": {
+						"wkid": 102100,
+						"latestWkid": 3857
+					},
+					"z": 1302.1084081213921
+				},
+				"heading": 352.13819298185643,
+				"tilt": 76.55029351634175
+			}
+		},
+		"environment": {
+			"lighting": {
+				"datetime": 1426380320000,
+				"displayUTCOffset": 11
+			}
+		}
+	},
+	"presentation": {
+		"slides": [{
+			"id": "slide_1",
+			"title": {
+				"text": "Overview"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 5191.885987126082,
+				"targetGeometry": {
+					"xmin": 1.877360929825019E7,
+					"ymin": -5627643.278809295,
+					"xmax": 1.877661070491737E7,
+					"ymax": -5624641.872100565,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.8776321561725076E7,
+						"y": -5628981.747247559,
+						"z": 1345.2615778502077,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 336.8876561199742,
+					"tilt": 64.99687988191947
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac5194-layer22"
+			}, {
+				"id": "ab80743d4f8f44099a6183dfbe376cc6"
+			}, {
+				"id": "5b5e48a34b2742d4a066415a5b114f9f"
+			}, {
+				"id": "584b5c03e9a04cc993c152464a12a839"
+			}, {
+				"id": "14a50ac4f12-layer21"
+			}, {
+				"id": "ac2175a264814cd6936dd854d5bca88b"
+			}, {
+				"id": "979cc2b9902144758051c8263f535f05"
+			}, {
+				"id": "ca6d0b3e05f74b5c9058bd4f2a48f564"
+			}, {
+				"id": "14a50ac49a8-layer20"
+			}, {
+				"id": "c5677c8dd2a340318632232070ed63d1"
+			}, {
+				"id": "77ca43e3258741358cd0ba5d226357b7"
+			}, {
+				"id": "c6ade4bb1ae6411db1ee70758a683c9b"
+			}, {
+				"id": "14a50ac30c9-layer19"
+			}, {
+				"id": "67739b50e6a549de9ca3a3ed9e1a77aa"
+			}, {
+				"id": "098b437b64764cf29c1df4571c383105"
+			}, {
+				"id": "59c6a074b31b4ff3aa2c8a93b93f0da9"
+			}, {
+				"id": "14a50ac2b37-layer18"
+			}, {
+				"id": "fea023f62f554021a8a783612ff69567"
+			}, {
+				"id": "e3c2ee6fdfee4801b5316196f17f861d"
+			}, {
+				"id": "d45ecff737334da2ba876c50b3107e03"
+			}]
+		}, {
+			"id": "slide_2",
+			"title": {
+				"text": "10:00"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 1232.7786886389529,
+				"targetGeometry": {
+					"xmin": 1.8774363180992566E7,
+					"ymin": -5627053.444252034,
+					"xmax": 1.8774416637591977E7,
+					"ymax": -5626999.987652621,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.877435829252214E7,
+						"y": -5627078.457283731,
+						"z": 320.056313094683,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 31.42728258033429,
+					"tilt": 89.37828982572726
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac5194-layer22"
+			}, {
+				"id": "ab80743d4f8f44099a6183dfbe376cc6"
+			}, {
+				"id": "5b5e48a34b2742d4a066415a5b114f9f"
+			}, {
+				"id": "584b5c03e9a04cc993c152464a12a839"
+			}]
+		}, {
+			"id": "slide_3",
+			"title": {
+				"text": "10:15"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 1236.8112828296785,
+				"targetGeometry": {
+					"xmin": 1.877483828389095E7,
+					"ymin": -5626829.941063293,
+					"xmax": 1.877492916337707E7,
+					"ymax": -5626739.061577178,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.877482623498411E7,
+						"y": -5626869.723060471,
+						"z": 321.11069802660495,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 34.00285504198868,
+					"tilt": 85.68085753375746
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac4f12-layer21"
+			}, {
+				"id": "ac2175a264814cd6936dd854d5bca88b"
+			}, {
+				"id": "979cc2b9902144758051c8263f535f05"
+			}, {
+				"id": "ca6d0b3e05f74b5c9058bd4f2a48f564"
+			}]
+		}, {
+			"id": "slide_4",
+			"title": {
+				"text": "10:30"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 1225.639742931897,
+				"targetGeometry": {
+					"xmin": 1.877520680759562E7,
+					"ymin": -5626733.530761599,
+					"xmax": 1.877530431686102E7,
+					"ymax": -5626636.021496196,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.8775190195971906E7,
+						"y": -5626773.990024745,
+						"z": 318.2136340280995,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 36.230081170394094,
+					"tilt": 89.05709186283943
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac49a8-layer20"
+			}, {
+				"id": "c5677c8dd2a340318632232070ed63d1"
+			}, {
+				"id": "77ca43e3258741358cd0ba5d226357b7"
+			}, {
+				"id": "c6ade4bb1ae6411db1ee70758a683c9b"
+			}]
+		}, {
+			"id": "slide_5",
+			"title": {
+				"text": "10:45"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 1330.844565719884,
+				"targetGeometry": {
+					"xmin": 1.877578962768844E7,
+					"ymin": -5626946.65647138,
+					"xmax": 1.8775891546143875E7,
+					"ymax": -5626844.738015946,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.8775779621830344E7,
+						"y": -5626993.835278046,
+						"z": 345.51960332971066,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 31.84943893234964,
+					"tilt": 87.85129208393977
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac30c9-layer19"
+			}, {
+				"id": "67739b50e6a549de9ca3a3ed9e1a77aa"
+			}, {
+				"id": "098b437b64764cf29c1df4571c383105"
+			}, {
+				"id": "59c6a074b31b4ff3aa2c8a93b93f0da9"
+			}]
+		}, {
+			"id": "slide_6",
+			"title": {
+				"text": "11:00"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAA9AHADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCy9j7VC1j7V2Laf7VG2n+1fcqsj5m5xzWPtUbWPtXYtp3+zVS/jtrC3ae+nhtoF4MkzhFH4nin7ZLcabOWNj7U02PtVHXfiN4a00MtvNLqEgJXFsnyg/77YBHuM157rPxV1a6LLpltbWMZxhv9bIPXk/L/AOO1yVc0oUt3d+R008LWn0t6np32D2pBZEkjaRg45714TdeKdduZHafV7wFuqrKyr/3yvFZz3EsrbpXlkbuWb/GuKWeL7MPx/wCHOmOXy6yPob7PGH2l03emRmpVscjgZr5wMn3sZIHTn/ChZRnLNgjpxUf26/8An3+P/AK/s7+9+H/BPpNbH2qRbH2r56ttf1K0jCWWo38SA8LHMyj8hW7bfELxLbeSv9oCRB2eON8jPc4z+taxzym/ii1/XyM5ZfU+y0e2LY+1TJY+1ecaT8VNT3kX2iw3CZADQsYcev3twP6V2Vn8R9CknEV1a6jaP3MkSsB/3yxJ/KumGaUJ/at6nPLCVo9D1LWvEPhvRTMuqa3ptvLENzwtOplA/wBwHcfoBXnet/GXRYmMXh3StQ1iTIxIEMETD2JBbPsVFefRafGhBsrvT9PLffSS8txj22h1P6ZqKdo2Z9/iPTY3UEACF5Bj/eAbH4V8/PMKj+HQ9GGX018Woa98R/HGqM0UEK6XGQQUtofnKnplm3EEeoxXISaPqesSy3GrahL5+3790JJHbHbODXS3cNnHLsfW0fzBy8MToBn/AHyv8sVv6XpmiWFt+68VpiQYb/QlnKfQEHH1BrmlWlU1k7nVGlGn8KseYy+G5QuUdskc5QAZxnru7imweE9WuY1a2tmnRiceWu5hjrkDkV6PLHYWyNI+qrqFtuJIUmED3I2gfzqjdDTppVdLy3tzkZjknIOep5+nrxUc0exdmcTceEdStIY5biCRVkxt3QuM8Z9MdOarNoF4LVplhLBW2kc5H14/rXo08+nxwG3Oy7tsncNsJ+Y/3SrEk+4Oaht7Gy88SJoOpBQBh1C7T6YDJ/Wi8XsLXqcDb6Le3MSyRWfyZ2GV5NqA49SRj86tX/hi4t0JeeCRuAvlyKwPGTzuzXoEY0qcIscUUZH3ReSsjD14RqsXGnWUar/Z+jupPLzmVpVb2XcgI/Wi6GeUQ6SXcxyTxRtjgMMgn0yK37TwTqEkkEUlveLLKpaONLKUl1HUjIGcZ7ZFdZJItpaMC6RTMeIWDKPXkhOn1qyDpcwS5e8hWUEEKbB2A659Fx+P+NS5IfK9zDXSl0WMfar3U7aVG/dD7P5JVx/tHJGPap3NpeyQpea1rN+zfOYZ4DOik8/LslGT35UVsf20kasBe6dP5bcK1jBnB46M/H5Gs+71SwuZlid4IpJcb5Whwo69o5dp/wC+aa0Fa4y30OxjLfZ7SW7QD7rsRg/7yDkfhUjWWmRRgz+DJmA53W99IGb6Blap5/Emoa7JvbSoGH8TQo0a/jtIFTWdhb7cyW+hW7HkZRnfPudrVg63JuzX2fMQado+gXygSeHtYs1J+9LfxKfpzCK15fAenxQB47MBH5VpZ3cD2OyM03yrgyqseraVCq/wxLtP5nH8qj1O3u7VZLm31yG5YLkW7FZST7AKP501iU9v1D2FtzLn8LQ2zJJ5VssWcbndsE+2MH86kvbV4HTbap5S8N5fnyIfxEmc/Q1Y0bRfGfiCFpdPgYW6nlJI4o1P/AW5rcj8D+LJ4CtzbrKvTyxGhB/EoAPzqfayb1aD2XZM5W1vLKygLX2gaOqcqpuPtu4+4AmWmXniDSPLQw6TpNvIva0glkVvf94W/UGuh1TwbeaVGZdU0KKKMDmVnZ/zCPmsFbXSosypFHdSHpGkTqmPYEsT+JqnPzE49Gb+i61aX9tGms38unQ46adZ2sbsP95SuPx5pNR1Xw1YIZNOvvFly7Ngi81SzjVB6qA5z+IrgZ7a2W6llfTXijJyFklYL+QINIt/bJKsltpkIkXo8Zf/ABqlNsXKu52cF3o8qCe70bWLtCcmWTXbWMfX5V5/WtO41rR208W2m2V7HMPlIfVLa7AX/vkmuBk8S3TsRJLdK/QfvpMD9TVebVNQvIjDLeTNGeMNI+MU4zezJcep6H4XSPZIt9p9tPjJwyGMkem4HDfTFSveeEkmZbmwto3X76Lyy/8AfeK870nTZIfmhkiK+xOBXr/gDSPOhVpbXTrxD94SwJIR+J5qZyUdReR5XH43uwqhtOt5GHR5LaFv02U9fEVxdhlnt7VFJzxbIp/MAUQaPDNCXaSUY7KcCoRpMMj7dzY/Orjg6K1UV9w3WJHu3UD7M/lnru3hMfTk1PJ4nubO2xd311OemRdbm/RhVNtGiB4kbHpimfZY4QQAp/4DRLCwbvZCVRnQaTq2q6jCDpFzqMY9ftJXH6mpLzUPH1sAg1u78sdFe/Z/5msbSp2sZC8PfqD0rYTWnnfY1tCPfFZyoNbFqbe7Ltlr3jy6hW3bxJJbQ4wQjAsfxxU0GhK5Mt1ffabw8+ZMPmz9ciqBkbfxhfoK0bWLzseY5NYuE11LUkJNo2pXZKXck91B02vcyMAPbLcVRuvBNoF/0dZoG7gsSPzOa62C2WFAV61PGyl/3kaP9RUctTuJtPdHHW/huwt0AvLdbrb2c/4EVh+J0tVj26bp6W8q9CJ//imr0+51mOyX5NNtXPq+T/WsW9vodSUmTT7NP92MVUYz7kXiuh5bp2qSxNsvrQp/tlM5/EGuz8I67awXarA5Uk8kLkflitvTfsEDlTpls/1UD+lazKPKL2Re1wM7VIZf1FacjZacGf/Z"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 1369.7974441908923,
+				"targetGeometry": {
+					"xmin": 1.87759412067604E7,
+					"ymin": -5626617.201282343,
+					"xmax": 1.8776158029073555E7,
+					"ymax": -5626400.378969174,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.8775951783355217E7,
+						"y": -5626733.941170426,
+						"z": 355.6429705992341,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 23.48657365057513,
+					"tilt": 93.54418769132032
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac2b37-layer18"
+			}, {
+				"id": "fea023f62f554021a8a783612ff69567"
+			}, {
+				"id": "e3c2ee6fdfee4801b5316196f17f861d"
+			}, {
+				"id": "d45ecff737334da2ba876c50b3107e03"
+			}]
+		}, {
+			"id": "slide_7",
+			"title": {
+				"text": "10:00 Sun View"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 9699.794112238846,
+				"targetGeometry": {
+					"xmin": 1.8784327365787093E7,
+					"ymin": -5616105.2895300025,
+					"xmax": 1.87847482737201E7,
+					"ymax": -5615684.381596881,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.8784805371270437E7,
+						"y": -5615539.406023832,
+						"z": 2521.5022590355948,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 216.9701446740649,
+					"tilt": 68.75758556129175
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac5194-layer22"
+			}, {
+				"id": "ab80743d4f8f44099a6183dfbe376cc6"
+			}, {
+				"id": "5b5e48a34b2742d4a066415a5b114f9f"
+			}, {
+				"id": "584b5c03e9a04cc993c152464a12a839"
+			}]
+		}, {
+			"id": "slide_8",
+			"title": {
+				"text": "10:15 Sun View"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 11200.471307807515,
+				"targetGeometry": {
+					"xmin": 1.8776634227757916E7,
+					"ymin": -5625425.276777883,
+					"xmax": 1.878429474595858E7,
+					"ymax": -5617764.757886547,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.8784545426612854E7,
+						"y": -5614541.827365744,
+						"z": 2911.9314029244706,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 210.0433664249793,
+					"tilt": 69.73073001096343
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac4f12-layer21"
+			}, {
+				"id": "ac2175a264814cd6936dd854d5bca88b"
+			}, {
+				"id": "979cc2b9902144758051c8263f535f05"
+			}, {
+				"id": "ca6d0b3e05f74b5c9058bd4f2a48f564"
+			}]
+		}, {
+			"id": "slide_9",
+			"title": {
+				"text": "10:30 Sun View"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAA9AHADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyW01+eAfPFHI2Op45roNEvo7tC8sx3Nwd42gevTH6Vw/1FW7a/ubVdsL7B7qD/MVU6Ca93c51I7maaC2ZQ07SbR8rE59eD+VINRF1Jtit23AffAwo68nJxXHnWr1gAzRnBJz5ag/mBW/oln4lu7AXNnpk95p5Yhntk3YOOR8vfpweayeHmVzHQ6WB+9VIwFb5WEeShPfGOp6ZrVkX7KElFnECfm5RW4/r/wDWrA0nU7awn23i3Fu6kfu5YiBkDuOa1b/xJYzRgwSOSoxtKsMD2461l7Oa6GvLpdjbk/aHDLny2G1doUbRgg5wM4qpfuba2CqEkh45jYhwD0JHpj3rEv8AWbWUjcSCv8IVgazJtTeebdaRSBumSdxI/KrjRnLdGTkkddBewPAfKwjgbAWOC3HX2z+lUxrEVs0sSExtgdTxnPXr6HpXM7L6ckGGU5OcEYGf5VattD1GdHcRJGijJZ2yP0zW31WKXvSEpSeyOk/t+0iUYChyMkhcg5GPfH51QvNZhmm8xZwrZz90nHOcciqtvoMTOq3V0209fLXGPX1zW9Z+H/D/AJTyOkrYG1VllOSeeWIAAH075qJQox7s0jTqvyKcXiowqEE4Y/xOynn8MUy68RNcsHU+WFGN6uR06ABh0z2H41sx6Foccm6C1SX5SD87Pye/UgY/w+tP0zwjp095uu7KXyCpOcuAueBjn1x/9esJOktkzRUJ9WNtbQT3TBbSMb+QoDMF47ckn8zVjUvDMN4vlXRkQjLAhAOPz5qtZ6s0C/JHMzjBw6MAOQeB9antfEDXBZZrm1gjjzsa53Lj6AA5IHtS9690bLkSsYk3gxIMmK6Yr2P2fj880Q+GZQci72kesZX+ZrXk8Y20aFHkMoBK74Izg44B+bB564PtWLe+K42QrBbHeTwzHAH4d/zFbRlWZL9miX/hGHILTXe0DqzRqAB6k7ulZ08VrazbI5TcY+8yAKPwOTn8qqSy3l/KPOYgcYDHAUeuOuPer1pb2yBVkuIWmY4VXYZz3AXPP5/hW3tXD42Ry82yJoordoFne3nCZ2hiygZ/LP6Vas9Pa4DMhYKf9WAM5/T+lWEhtJAJN1zdTKBhXGxFx/D9eKSG/mstWjnS1k+zldoVAzFTnr+P9K4cXjalKnKVKN2aKlbcuQ6KVtnKyLPdLjMXKhB3znBPYf41mTX13Kv2eV5CqnmID+ldRexajf3NtcpZ3VsXXMbSRMm8DuOnr+VZbxvNeStdzzRT5+dWALnHHU5z+tThsXOvSVSorN9OxThbYdpUZgVPNnWJgTtQMBtJ7lj06dBz+PFackaXEkaqol3DAkl5z6lQe3p/XtjjT7y7kD20jSZOcZBwP7zHgD/PFW9YhvfD88NldXUT3M8YYQxvubBzxjGecHpnOOM1Td+upaVjWe8hsLGUIFVG5HdmHQHHuc4H8ucVFmllcPdCUwrjZCoO+Zj03dPyGMUz7FPaJ9r1K3cOB5kYlO7GcY+X+HoOvOKbZ6iIroOiASOTvkYdM87RxkCoRT0FjupILWOb+zy0O7AfySFI9AwwCRzVB7qG9uDHGsLxyfMQDhQPp26msGfWbjUkVJ7uRkA+WIvkIMcYz0qpqqagujFbAyqJBsLI2B97OB6Ejr0zWt2YeZ0kvh6KaDzLaOPdnaUyfmOM4GMHpz0rW0DwrZNNG0uF3EkLCu6QjHQNkY59AfrXm3hHVNT0iQ2s6SvYk/vBI20Rg/eIY8Y5yRzmvR7PU9PZJJLDUStySdvkuNrnGcEYwCMjnjjtSm5bXHS5HrawviLw7baLJIb1IpoJCuJciJ4yT0ZcjcMd+T3waxNPheOy8poJpHkfMaOhO30zzyTzwRx+dN1e71jVzaJexTOFzLA8kYKMAuAyqq5PygHk9R05rq/h1q0VvcTW+s2scc5kbbcq+4SruGMqSRnv+HOcYE9NS7pss6HYwEN/atqjzKc+RHgdO3ufr61dtLmz1C2k+zoltNCUljaOHZvVh93rluODgAcit+717T55I0kjjhKqF80YUE4DZGBkAE9OmBXD+K7q3tZLiTTnhit7Z/NedpghLYGCOmRz0HT65zCV9C27anRv4ns72F7ZYpRGjq6iT5TFjrjA578eh9ABVfxDpenzWEV8tzG107bGVCWVl+oOM8Y6/mK8RtPEk9zNcyX6XN6p3LFtGxEBU43MML3HJB6HpnNdp4MvheW/9m3us2enXcG1YY9rCAoCflZiSRjg5IPPHGOa9k47GftV1LGrX97pjxw6XuYTmRHkllEQjAA43FSAee3OCOxrOW5l0uV719LRLwR/69JBIrknn585BwcZOCcfn6Pq83gODR10vVtZi+2BvtIureQS+bIoI6JkYAyAHA6nHVq8w0LXBBczSQIZNJQEyi9nMcajgAqAd2cjHH9a25FG2hhztvc6q4urvU7KEbPk8sz/ACyBkKnYoJcEgnLc+mMHHfNksWRnG8kwgNLkYCk4/M/54rzLUtennu2kjY2cbkHNuDFk87TxnOASP51SlnvLoP8Aa768dZPvBpmIY+4pexS2dh+1d9Tstb8EtZQFvmkO4gNA5UEHp8rHj9evFVvDcX9laiUaNpIZflngkwM/7WTgA16pfW+4EebKvVTgjB/MVxV9ZJNbSyAiNw4jyo/2WOee9Zxm3ozolHqiS8TTlt0m+0GSGcDYFO44Jx84HQdeuehHas6ytbm/uxFp6NIm4kiQLEBzgckgc8de1L8N9NTxDqGqG/kcixglujjrIsag7cnoTxg8gY6Go08XXuraOdPsY49MsCm6dISTJcF8ZDPwdvy4CjAx13EZrTksrsxlK+hq6xceHdJtJbJr+71LUQp2W9ioSCFs42ySOpJI5yFXnHWuXtr28nfZM95bxk71S3tEiye5V3HIwT37ZxVi1tVEkSqQueFwMAfUdx7VLNNL9hdkEQAkKsrIWBzx0J/Md+PxnmXRAohNpTXDbzayXu0ctcXBuGP58D8hVW3tLBJ42urdYpI1+6I9inuccHH61ejvXmhjKqscQ5WJfur9BVS91AC4tl8nidS3384IXPfrU3bHaJoObSaykmDeVbBgHwwZSfRht9+h/wAax4LZLyNJrSZGhYsdgk3DAJwMN8ynAwAMqMcCn3Yhe2lzFww2kZ49M46Zq7pFkskkNhG7okSblcn5hz7Y/I5HTIOKSKcUxumXSK/7yMwkgqWKhHYd1LYx6+3p2pPE8dhcFHggnjSFuUjCO0gI5JYDjG30/ix9YdS/0SS0udzst05jeMNgZ+Ybvr8vP1B45zBcXHl29xIiYUIRtz269e3IB49KZm+xvaZYKLVk8uKSBxtAaPLEYPJfbx16/wD66xW8JXsczF59OlXP3luCc/5+taGnajd6alxa20kawRL5uBGMk78YB7D5z1z/AIaWiavNqM8UYURfaUMrOrHcDjHUYzwAPy9KlXjqaLlnZM//2Q=="
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 12725.689663669813,
+				"targetGeometry": {
+					"xmin": 1.8775328773806866E7,
+					"ymin": -5625930.585021575,
+					"xmax": 1.8783942245531894E7,
+					"ymax": -5617317.112314733,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.878411136055609E7,
+						"y": -5613639.630468667,
+						"z": 3308.7928078193218,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 209.2633763810689,
+					"tilt": 69.5843946319135
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac49a8-layer20"
+			}, {
+				"id": "c5677c8dd2a340318632232070ed63d1"
+			}, {
+				"id": "77ca43e3258741358cd0ba5d226357b7"
+			}, {
+				"id": "c6ade4bb1ae6411db1ee70758a683c9b"
+			}]
+		}, {
+			"id": "slide_10",
+			"title": {
+				"text": "10:45 Sun View"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 13541.047762584303,
+				"targetGeometry": {
+					"xmin": 1.877532877380682E7,
+					"ymin": -5625930.585021697,
+					"xmax": 1.8783942245531924E7,
+					"ymax": -5617317.112314778,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.8783201075929396E7,
+						"y": -5613321.211093943,
+						"z": 3520.9173652380705,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 203.23235296292864,
+					"tilt": 67.69627700009504
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac30c9-layer19"
+			}, {
+				"id": "67739b50e6a549de9ca3a3ed9e1a77aa"
+			}, {
+				"id": "098b437b64764cf29c1df4571c383105"
+			}, {
+				"id": "59c6a074b31b4ff3aa2c8a93b93f0da9"
+			}]
+		}, {
+			"id": "slide_11",
+			"title": {
+				"text": "11:00 Sun View"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"visibility": true,
+				"id": "basemap",
+				"title": "Imagery",
+				"baseMapLayers": [{
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"id": "c675e6863335431284832a85fac44deb",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}]
+			},
+			"viewpoint": {
+				"scale": 14425.401318428863,
+				"targetGeometry": {
+					"xmin": 1.8775328773807433E7,
+					"ymin": -5625930.585020405,
+					"xmax": 1.8783942245531768E7,
+					"ymax": -5617317.112314251,
+					"spatialReference": {
+						"wkid": 102100
+					}
+				},
+				"camera": {
+					"position": {
+						"x": 1.87822989042198E7,
+						"y": -5613136.345031183,
+						"z": 3750.9420911278576,
+						"spatialReference": {
+							"wkid": 102100
+						}
+					},
+					"heading": 197.41548556432934,
+					"tilt": 65.61954313110408
+				}
+			},
+			"visibleLayers": [{
+				"id": "14a50ac2b37-layer18"
+			}, {
+				"id": "fea023f62f554021a8a783612ff69567"
+			}, {
+				"id": "e3c2ee6fdfee4801b5316196f17f861d"
+			}, {
+				"id": "d45ecff737334da2ba876c50b3107e03"
+			}]
+		}, {
+			"id": "slide_12",
+			"title": {
+				"text": "Queenstown overview"
+			},
+			"thumbnail": {
+				"url": "data:image/jpeg;base64,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"
+			},
+			"description": {
+				"text": ""
+			},
+			"baseMap": {
+				"id": "basemap_8",
+				"title": "Imagery with Labels",
+				"baseMapLayers": [{
+					"id": "154697c1643-layer-46",
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+					"layerType": "ArcGISTiledMapServiceLayer"
+				}, {
+					"id": "154697c2456-layer-49",
+					"url": "http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer",
+					"layerType": "ArcGISTiledMapServiceLayer",
+					"isReference": true
+				}]
+			},
+			"viewpoint": {
+				"scale": 45258.96213524489,
+				"rotation": 318.3427766712919,
+				"targetGeometry": {
+					"x": 1.8775973015706066E7,
+					"y": -5626364.769059705,
+					"spatialReference": {
+						"wkid": 102100,
+						"latestWkid": 3857
+					},
+					"z": 373.3201987417415
+				},
+				"camera": {
+					"position": {
+						"x": 1.8767392147454116E7,
+						"y": -5636019.470146492,
+						"spatialReference": {
+							"wkid": 102100,
+							"latestWkid": 3857
+						},
+						"z": 2727.6825419962406
+					},
+					"heading": 41.65722332870809,
+					"tilt": 75.49305864896579
+				}
+			},
+			"visibleLayers": [{
+				"id": "featuredLayer"
+			}, {
+				"id": "userLayer"
+			}, {
+				"id": "portalLayer"
+			}, {
+				"id": "154697abd01-layer-30"
+			}],
+			"environment": {
+				"lighting": {
+					"datetime": 1426380338000,
+					"displayUTCOffset": 11
+				}
+			}
+		}]
+	}
+}

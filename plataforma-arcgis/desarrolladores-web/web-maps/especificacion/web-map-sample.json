@@ -1,0 +1,716 @@
+{
+  "authoringApp": "WebMapViewer", <- Herramienta con la que se creó
+  "authoringAppVersion": "4.1", <- Versión de la herramienta
+  "version": "2.4", <- Versión de la especificación web map utilizada
+  "operationalLayers": [ <- Capas operacionales con los datos de negocio (una entrada por cada servicio)
+    {
+      "id": "USGS_Seismic_Data_5353",
+      "layerType": "ArcGISMapServiceLayer", <- Tipo (hay 14 soportados en la 2.4)
+      "url": "http://utility.arcgis.com/usrsvcs/servers/0d1793bd6b2c438996fd4d3aed46219f/rest/services/LiveFeeds/USGS_Seismic_Data/MapServer",
+      "visibility": true,
+      "opacity": 1,
+      "title": "Earthquakes",
+      "itemId": "0d1793bd6b2c438996fd4d3aed46219f", <- item id de ArcGIS Online / Portal
+      "layers": [
+        {
+          "id": 1, <- id de la capa dentro del servicio
+          "popupInfo": { <- Información del look and feel de los popups al hacer click
+            "title": "PAGER Alerts for Past Week: {id}",
+            "fieldInfos": [ <- Campos a mostrar, alias, formato, etc
+              {
+                "fieldName": "OBJECTID",
+                "label": "OBJECTID",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "Shape",
+                "label": "Shape",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "id",
+                "label": "Event ID",
+                "tooltip": "",
+                "visible": true,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "mag",
+                "label": "Magnitude",
+                "tooltip": "",
+                "visible": true,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "sig",
+                "label": "Significance",
+                "tooltip": "",
+                "visible": true,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "alert",
+                "label": "Alert Level",
+                "tooltip": "",
+                "visible": true,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "place",
+                "label": "Location",
+                "tooltip": "",
+                "visible": true,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "hoursOld",
+                "label": "Hours Old",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "updated",
+                "label": "Last Update",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "dateFormat": "longMonthDayYear"
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "tz",
+                "label": "tz",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "url",
+                "label": "Event Link",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "detail",
+                "label": "detail",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "felt",
+                "label": "felt",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "cdi",
+                "label": "cdi",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "mmi",
+                "label": "mmi",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "status",
+                "label": "status",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "tsunami",
+                "label": "tsunami",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "net",
+                "label": "net",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "code",
+                "label": "code",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "ids",
+                "label": "ids",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "sources",
+                "label": "sources",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "types",
+                "label": "types",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "nst",
+                "label": "nst",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "dmin",
+                "label": "dmin",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "rms",
+                "label": "rms",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "gap",
+                "label": "gap",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "magType",
+                "label": "magType",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "longitude",
+                "label": "longitude",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "latitude",
+                "label": "latitude",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "depth",
+                "label": "depth",
+                "tooltip": "",
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                },
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "eventType",
+                "label": "Event Type",
+                "tooltip": "",
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "eventTime",
+                "label": "Event Time",
+                "tooltip": "",
+                "visible": true,
+                "format": {
+                  "dateFormat": "longMonthDayYear"
+                },
+                "stringFieldOption": "textbox"
+              }
+            ],
+            "description": null,
+            "showAttachments": true,
+            "mediaInfos": [] <- Propiedades de los gráficos/imágenes a mostrar
+          }
+          ... <- Hay más campos opcionales???? (isReference, refreshInterval, showLeyend, ...)
+        },
+        {
+          "id": 12,
+          "popupInfo": {
+            "title": "Shake Intensity",
+            "fieldInfos": [
+              {
+                "fieldName": "ShakeIntensity.OBJECTID",
+                "label": "OBJECTID",
+                "isEditable": false,
+                "visible": false
+              },
+              {
+                "fieldName": "ShakeIntensity.Shape",
+                "label": "Shape",
+                "isEditable": false,
+                "visible": false
+              },
+              {
+                "fieldName": "ShakeIntensity.grid_code",
+                "label": "grid_code",
+                "isEditable": false,
+                "visible": true,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.id",
+                "label": "Event ID",
+                "isEditable": false,
+                "visible": true,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.mag",
+                "label": "Magnitude",
+                "isEditable": false,
+                "visible": true,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.sig",
+                "label": "Significance",
+                "isEditable": false,
+                "visible": true,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.alert",
+                "label": "Alert Level",
+                "isEditable": false,
+                "visible": true,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.place",
+                "label": "Location",
+                "isEditable": false,
+                "visible": true,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.hoursOld",
+                "label": "Hours Old",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.updated",
+                "label": "Last Update",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "dateFormat": "shortDateShortTime",
+                  "timezone": "utc"
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.tz",
+                "label": "tz",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.url",
+                "label": "Event Link",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.detail",
+                "label": "detail",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.felt",
+                "label": "felt",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.cdi",
+                "label": "cdi",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.mmi",
+                "label": "mmi",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.status",
+                "label": "status",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.tsunami",
+                "label": "tsunami",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.net",
+                "label": "net",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.code",
+                "label": "code",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.ids",
+                "label": "ids",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.sources",
+                "label": "sources",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.types",
+                "label": "types",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.nst",
+                "label": "nst",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 0,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.dmin",
+                "label": "dmin",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.rms",
+                "label": "rms",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.gap",
+                "label": "gap",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.magType",
+                "label": "magType",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.longitude",
+                "label": "longitude",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.latitude",
+                "label": "latitude",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.depth",
+                "label": "depth",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "ShakeIntensity.grid_value",
+                "label": "grid_value",
+                "isEditable": false,
+                "visible": false,
+                "format": {
+                  "places": 2,
+                  "digitSeparator": true
+                }
+              },
+              {
+                "fieldName": "SeismicEvents.eventType",
+                "label": "Event Type",
+                "isEditable": false,
+                "visible": false,
+                "stringFieldOption": "textbox"
+              },
+              {
+                "fieldName": "SeismicEvents.eventTime",
+                "label": "Event Time",
+                "isEditable": false,
+                "visible": true,
+                "format": {
+                  "dateFormat": "shortDateShortTime",
+                  "timezone": "utc"
+                }
+              }
+            ],
+            "description": null,
+            "showAttachments": false,
+            "mediaInfos": []
+          }
+        }
+      ]
+    }
+  ],
+  "baseMap": { <- Nota, el mapa base fefine la refencia espacial en que se solicitan el resto de capas
+    "baseMapLayers": [ <- Puede tener múltiples capas, por ej -> imagery with labels
+      {
+        "id": "NatGeo_World_Map_2536",
+        "layerType": "ArcGISTiledMapServiceLayer",
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer",
+        "visibility": true,
+        "opacity": 1,
+        "title": "NatGeo_World_Map"
+        ... <- Hay más campos
+      }
+    ],
+    "title": "National Geographic"
+  },
+  "spatialReference": { <- Referencia espacial en la que se mostrará la aplicación
+    "wkid": 102100, <- Esri Web Mercator (anteriores esta y 102113 (desaconsejado))
+    "latestWkid": 3857 <- Opcional: especifica el wkid actual asociado con la misma referencia espacial, por ejemplo sí wkid es 102100 web mercator) tiene un el valor 3857 <- proyectado
+    // Nota: podríamos usar ese servicio dinámico -> http://bit.ly/2byXyjc como mapa base y el wkid sería: 4326
+  },
+  "bookmarks": [ <- Marcadores/Favoritos guardados
+    {
+      "extent": { <- Se especifica un rectángulo con las esquinas superior derecha e inferior izquierda
+        "spatialReference": { <- referencia espacial de la geometría (obligatorio)
+          "wkid": 102100
+        },
+        "xmax": 20037508.342788905, <- xmax + ymax (upper-right)
+        "xmin": 438918.28940851986, <- xmin + ymin (lower-left)
+        "ymax": 10547086.910898983, <- xmax + ymax (upper-right)
+        "ymin": -2406849.1466429518 <- xmin + ymin (lower-left)
+      },
+      "name": "Asia"
+    },
+    {
+      "extent": {
+        "spatialReference": {
+          "wkid": 102100
+        },
+        "xmax": -7894189.859190118,
+        "xmin": -20037508.342788905,
+        "ymax": 8467031.061704319,
+        "ymin": -2627956.467942626
+      },
+      "name": "Ring of Fire"
+    },
+    {
+      "extent": {
+        "spatialReference": {
+          "wkid": 102100
+        },
+        "xmax": -4592364.421318072,
+        "xmin": -19043243.24079651,
+        "ymax": 10243784.782663489,
+        "ymin": 1907868.225997523
+      },
+      "name": "North America"
+    }
+  ],
+  "applicationProperties": { <- Contiene las propiedades de visualización y edición
+    "viewing": { <-- Propiedades de visualización
+      "routing": {
+        "enabled": true <-- Indica hacer uso del servicio de rutas
+      },
+      "measure": {
+        "enabled": true <-- Indica hacer uso de la herramienta de medición
+      },
+      "basemapGallery": {
+        "enabled": true <-- Indica si usar la galería de mapas bases derivadas los grupo de la organización
+      },
+      "search": { <- Parámetro de búsqueda
+        "enabled": true, <- Indica si se permite hacer búsquedas en el webmap
+        "disablePlaceFinder": false,
+        "hintText": "Place or Address",
+        "layers": [ <- Array de capas definiendo el estilo, geometrías y atributos para las geometrías
+          {
+              "field": {
+                  "alias": "Name",
+                  ... <- Hay más campos
+                  "exactMatch": false,
+                  "name": "STATE_NAME",
+                  "type": "esriFieldTypeString"
+              },
+              "id": "Census_9227",
+              "subLayer": "3"
+          }
+        ]
+      }
+    }
+    // -> Existe el campo editing: específico para collector (tracking de ubicación)
+  },
+  // -> presentation: aparecería en caso de crear una presentación
+  // -> table: para los webmaps con servicioss que tienen tablas asociadas (por ej: http://arcg.is/2bdywUF)
+  // -> widget: de momento sólo el timeSlide (por ej: http://arcg.is/2beVSeb)
+}
