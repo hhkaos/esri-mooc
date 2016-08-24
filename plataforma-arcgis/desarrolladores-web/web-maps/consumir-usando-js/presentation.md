@@ -91,21 +91,6 @@ Ver en [js.arcgis.com](https://developers.arcgis.com/javascript/latest/sample-co
 
 <!-- .slide: class="section" -->
 
-### ¿Y si el modelo geográfico es insuficiente?
-
-* Tienes dos opciones:
-  * Ampliarlo con una *BD propia** y extender <br>
-    la API con una [clase personalizada](https://developers.arcgis.com/javascript/3/jshelp/intro_javascript_classes.html)
-
-  * Crear una app configurable como veremos <br>
-    más adelante
-
-<small>**Nota**: También puedes almacenar los datos en un item</small>
-
----
-
-<!-- .slide: class="section" -->
-
 ## Referencias
 * [Índice de propiedades](https://developers.arcgis.com/web-map-specification/objects/)
 * [web-scene-sample.json](web-scene-sample.json)
