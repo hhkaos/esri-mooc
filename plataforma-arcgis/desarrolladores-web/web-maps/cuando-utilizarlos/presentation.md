@@ -63,6 +63,25 @@ App Nativa: [QR](images/nerja-guide-qr.png) | [AppStudio Standard](arcgis-appstu
 
 ---
 
+<!-- .slide: class="section" -->
+
+### Utiliza un webmap cuando...
+
+> Tengas que crear `renderizadores complejos`
+
+---
+
+<!-- .slide: class="section" -->
+
+#### Renderizadores complejos
+
+<iframe src="http://hhkaos2.maps.arcgis.com/apps/MapSeries/index.html?appid=ad34fa1a7edd4e6686846ec69d67d854" style="width:100%; height:550px"></iframe>
+
+> <small>Recuerda que si lo necesitas puedes extraer los <br>
+[la configuración del renderizador de la especificación del web map](https://www.arcgis.com/sharing/rest/content/items/596c4a99ac4b4913badfe5bff541a87f/data?f=json)<small>
+
+---
+
 <!-- .slide: class="questions centered" -->
 
 ## Preguntas
