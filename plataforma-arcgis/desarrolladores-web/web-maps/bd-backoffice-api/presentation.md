@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-## Consumir web maps/scenes <br>usando JavaScript
+## Web map como BD + Backoffice + API
 Plataforma ArcGIS para desarrolladores web
 
 [desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)
@@ -9,9 +9,7 @@ Plataforma ArcGIS para desarrolladores web
 
 <!-- .slide: class="section" -->
 
-### Web map como: BD + BackOffice + API/ORM
-
-<img src="https://docs.google.com/drawings/d/1OKpYpesHKMcRxxsL-ymvlvHsu-kK1M8HdZmosplzs5M/pub?w=900">
+<img src="https://docs.google.com/drawings/d/1OKpYpesHKMcRxxsL-ymvlvHsu-kK1M8HdZmosplzs5M/pub?w=1000">
 
 ---
 
