@@ -4100,6 +4100,26 @@ todas las aplicaciones que lo consuman
 
 <!-- .slide: class="section" -->
 
+## Ventajas a nivel de desarrollo
+
+* Algunas de las ventajas que proporcionan:
+	* No necesitamos crear una base de datos para<br>
+	 	almacenar los parámetros
+
+	* Podemos reutilizar los usuarios y grupos de<br>
+		nuestra organización para configurar quién tiene <br>
+		acceso a ver y editar a cada web map.
+
+	* Podemos crear aplicaciones genéricas que se <br>
+		configuren a partir de los datos del webmap<sup>*</sup>
+
+<small>**Nota**: Veremos cómo podemos evolucionar esta idea en el módulo de apps configurables</small>
+
+
+---
+
+<!-- .slide: class="section" -->
+
 ## Más referencias:
 * Documentación de la API REST:
 	* [Web Map specification](https://developers.arcgis.com/web-map-specification/)
