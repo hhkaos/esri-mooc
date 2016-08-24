@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-## Extendiendo la especificación
+## Consejos y trucos
 Plataforma ArcGIS para desarrolladores web
 
 [desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)
@@ -19,6 +19,14 @@ Plataforma ArcGIS para desarrolladores web
     más adelante
 
 <small>**Nota**: También puedes almacenar los datos en un item</small>
+
+---
+
+<!-- .slide: class="section" -->
+
+## Extendiendo con BD propia
+
+<iframe src="panel-extension.html" style="width:100%;height:650px"></iframe>
 
 ---
 
