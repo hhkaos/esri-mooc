@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+    <link rel="stylesheet" href="http://hhkaos.github.io/master-esri/codigo/assets/css/monokai-sublime.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <style>
+    .list-group-item {
+      display: list-item;
+    }
+    </style>
+
+    <script src="https://js.arcgis.com/4.0/"></script>
+    <script>
+
+      require([
+        "esri/WebMap",
+        "esri/tasks/support/Query"
+      ], function(
+        WebMap, Query
+      ) {
+
+        var webmap = new WebMap({
+          portalItem: {
+            id: '7eaa14a2c80e4228b93538f9dba3920d'
+          }
+        });
+
+        document.getElementById("step1").style.display="block";
+        webmap.load()
+          .then(function() {
+            console.log("webmap=", webmap);
+            document.getElementById("step2").style.display="block";
+            var layer = webmap.allLayers.find(function(layer) {
+             return layer.id === "orp_sensor_4775";
+            });
+
+            return layer.load();
+          })
+          .then(function(featureLayer) {
+            document.getElementById("step3").style.display="block";
+            var query = new Query();
+            query.where = 'OBJECTID = 1';
+            return featureLayer.queryFeatures(query);
+          })
+          .then(function(result) {
+            document.getElementById("step4").style.display="block";
+            document.getElementById("features").style.display="block";
+            pprint(result.features,"features");
+          })
+          .otherwise(function(error) {
+            console.error(error);
+          });
+
+          var pprint = function(obj, container){
+            var output = JSON.stringify(obj, null,'\t')
+            var myDiv = document.getElementById(container);
+            myDiv.innerHTML = output;
+            hljs.highlightBlock(myDiv);
+          };
+
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loading web map contents asyncronously</h1>
+      <ol class="list-group">
+        <li class="list-group-item" id="step1" style="display:none">1. Loading web map (7eaa14a2c80e4228b93538f9dba3920d)</li>
+        <li class="list-group-item" id="step2" style="display:none">2. Searching for layer with: id = "orp_sensor_4775"</li>
+        <li class="list-group-item" id="step3" style="display:none">3. Querying features where: OBJECTID = 1</li>
+        <li class="list-group-item" id="step4" style="display:none">
+          <p>4. Displaying results:</p>
+          <pre><code class="javascript" id="features" style="display:none">Loading...</code></pre>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

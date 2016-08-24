@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-## Consumir web maps/scenes usando JavaScript
+## Consumir web maps/scenes <br>usando JavaScript
 Plataforma ArcGIS para desarrolladores web
 
 [desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)
@@ -11,11 +11,60 @@ Plataforma ArcGIS para desarrolladores web
 
 ## Cargarlo sin pintarlo
 
+```js
+webmap.load()
+  .then(function() {
+    var layer = webmap.allLayers.find(function(layer) {
+     return layer.id === "orp_sensor_4775";
+    });
+    return layer.load();
+  })
+  .then(function(featureLayer) {
+    var query = new Query();
+    query.where = 'OBJECTID = 1';
+    return featureLayer.queryFeatures(query);
+  })
+  .then(function(result) {
+    console.log(result.features);
+  })
+  .otherwise(function(error) {
+    console.error(error);
+  });
+```
+Ver ejemplo: [asyncronous-web-map-load.html](asyncronous-web-map-load.html)
+
 ---
 
 <!-- .slide: class="section" -->
 
-## Web Scene
+## Clase: WebMap
+
+```js
+require([
+  "esri/views/MapView",
+  "esri/WebMap",
+  "dojo/domReady!"
+], function(SceneView, WebScene) {
+
+  var webmap = new WebMap({
+    portalItem: {
+      id: "e691172598f04ea8881cd2a4adaa45ba"
+    }
+  });
+
+  var view = new MapView({
+    map: webmap,
+    container: "viewDiv"
+  });
+});
+```
+Ver en [js.arcgis.com](https://developers.arcgis.com/javascript/latest/sample-code/sandbox/sandbox.html?sample=webmap-basic)
+
+---
+
+<!-- .slide: class="section" -->
+
+## Clase: WebScene
 
 ```js
 require([
@@ -60,89 +109,69 @@ Ver en [js.arcgis.com](https://developers.arcgis.com/javascript/latest/sample-co
 
 ## Utiliza un webmap cuando...
 
-1. Tengas que crear y mantener una <br>
-   aplicación en varios lenguajes
-
-2. Quieras aumentar la velocidad y reducir <br>
-   el código de crear una aplicación
-
-3. Te pidan un backoffice para poder <br>
-   modificar el modelo geográfico
+> Quieras `aumentar la velocidad y reducir las líneas de código` de crear una aplicación
 
 ---
 
 <!-- .slide: class="section" -->
 
-## ¿Y si el modelo geográfico es insuficiente?
+### 81 mapas en 60 líneas JS
+
+<iframe src="gallery.html" style="width:100%;height:550px"></iframe>
+
+> Ver código fuente: [gallery.html](https://github.com/esri-es/moocs/blob/gh-pages/plataforma-arcgis/desarrolladores-web/web-maps/introduccion/gallery.html)
+
+---
+
+<!-- .slide: class="section" -->
+
+## Utiliza un webmap cuando...
+
+> `Te pidan un backoffice` para poder modificar el modelo geográfico
+
+---
+
+<!-- .slide: class="section" -->
+
+### 81 mapas + backoffice en 60+2 líneas JS
+
+<iframe src="gallery-edit.html" style="width:100%;height:550px"></iframe>
+
+> Ver código fuente: [gallery-edit.html](https://github.com/esri-es/moocs/blob/gh-pages/plataforma-arcgis/desarrolladores-web/web-maps/introduccion/gallery-edit.html)
+
+---
+
+<!-- .slide: class="section" -->
+
+### Utiliza un webmap cuando tengas que...
+
+> * `Mantener coherencia` entre varias aplicaciones
+* Crear una misma app para `varias plataformas`
+
+---
+
+<!-- .slide: class="section" -->
+
+### Web app + App Nativa
+
+<iframe src="http://www.nerjamap.com/" style="width:100%; height:550px"></iframe>
+
+App Nativa: [QR](images/nerja-guide-qr.png) | [AppStudio Standard](arcgis-appstudio://hhkaos2@www.arcgis.com?id=9f731456db7746759a62b5ceebe9e340) - Editar [web map](https://hhkaos2.maps.arcgis.com/home/webmap/viewer.html?webmap=230d2efb94a148c49507f4730c221bbe) | [app](http://hhkaos2.maps.arcgis.com/apps/MapTour/index.html?appid=b73182a581604ccfacaf00792a2562d3&edit)
+
+---
+
+<!-- .slide: class="section" -->
+
+### ¿Y si el modelo geográfico es insuficiente?
 
 * Tienes dos opciones:
-  * Ampliarlo con una *BD propia** y extender la API con una clase personalizada
-  * Crear una app configurable como veremos más adelante
+  * Ampliarlo con una *BD propia** y extender <br>
+    la API con una [clase personalizada](https://developers.arcgis.com/javascript/3/jshelp/intro_javascript_classes.html)
 
-<small>También existe la posibilidad de almacenar los datos en un item</small>
+  * Crear una app configurable como veremos <br>
+    más adelante
 
----
-
-<!-- .slide: class="section" -->
-
-## Ventajas a nivel de desarrollo
-
-* Algunas de las ventajas que proporcionan:
-	* No necesitamos crear una base de datos para<br>
-	 	almacenar los parámetros
-
-	* Podemos reutilizar los usuarios y grupos de<br>
-		nuestra organización para configurar quién tiene <br>
-		acceso a cada plantilla.
-
-	* Los usuarios que decidamos podrán crear, mantener<br>
-		y publicar de sus aplicaciones web sin tener que<br>
-		interrumpir al equipo de desarrollo.
-
----
-
-<!-- .slide: class="section" -->
-
-## Flujo de trabajo
-
-> Para hacer efectivo esta nueva forma de trabajo lo
-único que necesitaremos es que los usuarios encargados
-de crear aplicaciones en nuestra organización aprendan:
-* A usar la interfaz de configuración
-* Y en caso de que los usemos, a crear webmaps.
-
----
-
-<!-- .slide: class="section" -->
-
-
-Enfocar Webmap como herramienta de productividad para el desarrollo (reutilización), no pensar tanto en casos en los que una organización controle el webmap que consume tu app (por posibles riesgos de que te borren capas que asumen que siempre estarán ahí, etc), o pensar bien cómo se tendría que hacer esa app (funcionalidad condicionada a que esté ese feature?, crearlo como plantilla configurable?).
-
----
-
-<!-- .slide: class="section" -->
-
-## Detalles
-
-**Propiedades de alto nivel**
-
-```javascript
-{
-  "authoringApp": "X",
-  "authoringAppVersion": "Y",
-  "version": "Z",
-  "operationalLayers": [],
-  "baseMap": {},
-  "spatialReference": {},
-  "bookmarks": [],
-  "applicationProperties": {},
-  "presentation": {},
-  "table": {},
-  "widget": {}
-}
-```
-
-> Ver: [web map original](https://www.arcgis.com/sharing/rest/content/items/7d987ba67f4640f0869acb82ba064228/data?f=json) | [comentado](web-map-sample.json)
+<small>**Nota**: También puedes almacenar los datos en un item</small>
 
 ---
 

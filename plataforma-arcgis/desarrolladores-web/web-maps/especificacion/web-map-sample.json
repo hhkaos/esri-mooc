@@ -11,6 +11,7 @@
       "opacity": 1,
       "title": "Earthquakes",
       "itemId": "0d1793bd6b2c438996fd4d3aed46219f", <- item id de ArcGIS Online / Portal
+      ... <- mode
       "layers": [
         {
           "id": 1, <- id de la capa dentro del servicio
@@ -310,9 +311,9 @@
             ],
             "description": null,
             "showAttachments": true,
-            "mediaInfos": [] <- Propiedades de los gráficos/imágenes a mostrar
+            "mediaInfos": [] <- Propiedades de los gráficos/imágenes a mostrar (ej: http://arcg.is/2bE37vh)
           }
-          ... <- Hay más campos opcionales???? (isReference, refreshInterval, showLeyend, ...)
+          ... <- Hay más campos opcionales???? (title, maxScale, minScale, showLeyend, ...)
         },
         {
           "id": 12,
@@ -711,6 +712,6 @@
     // -> Existe el campo editing: específico para collector (tracking de ubicación)
   },
   // -> presentation: {} aparecería en caso de crear una presentación
-  // -> tables: [] para los webmaps con servicioss que tienen tablas asociadas (por ej: http://arcg.is/2bdywUF)
+  // -> tables: [] para los webmaps con servicioss que tienen tablas asociadas (por ej: http://arcg.is/2bdywUF | http://arcg.is/2bE1EFy)
   // -> widgets: {} de momento sólo el timeSlide (por ej: http://arcg.is/2beVSeb)
 }

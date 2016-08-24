@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+
+    <!-- Calcite Bootstrap -->
+    <link rel="stylesheet" href="http://esri.github.com/calcite-maps/dist/css/calcite-bootstrap.min-v0.2.css">
+
+    <!-- Calcite Maps -->
+    <link rel="stylesheet" href="http://esri.github.com/calcite-maps/dist/css/calcite-maps-arcgis-4.x.min-v0.2.css">
+
+
+    <style>
+      html, body, #viewDiv {
+        height: 100%; width: 100%; margin: 0; padding: 0;
+      }
+      .calcite-title-main{padding-left: 20px}
+      #logo{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+      }
+      #logo img{width:200px;}
+    </style>
+
+    <script type="text/javascript">
+     var dojoConfig = {
+       packages: [{
+         name: "bootstrap",
+         location: "http://esri.github.com/calcite-maps/dist/vendor/dojo-bootstrap"
+       },
+       {
+         name: "calcite-maps",
+         location: "http://esri.github.com/calcite-maps/dist/js/dojo"
+       }]
+     };
+   </script>
+
+    <script src="https://js.arcgis.com/4.0/"></script>
+    <script>
+      require([
+        "esri/request",
+        "esri/views/MapView",
+        "esri/WebMap",
+        "bootstrap/Collapse",
+        "calcite-maps/calcitemaps-v0.2",
+        "dojo/domReady!"
+      ], function(
+        esriRequest, MapView, WebMap
+      ) {
+
+        var url = "http://www.arcgis.com/sharing/rest/search";
+        var query = {
+          q: '(owner:hhkaos2) -type:"web mapping application" -type:"Layer Package" (type:"Project Package" OR type:"Windows Mobile Package" OR type:"Map Package" OR type:"Basemap Package" OR type:"Mobile Basemap Package" OR type:"Mobile Map Package" OR type:"Pro Map" OR type:"Project Package" OR type:"Web Map" OR type:"CityEngine Web Scene" OR type:"Map Document" OR type:"Globe Document" OR type:"Scene Document" OR type:"Published Map" OR type:"Explorer Map" OR type:"ArcPad Package" OR type:"Map Template") -type:"Layer" -type: "Map Document" -type:"Map Package" -type:"Basemap Package" -type:"Mobile Basemap Package" -type:"Mobile Map Package" -type:"ArcPad Package" -type:"Project Package" -type:"Project Template" -type:"Desktop Style" -type:"Pro Map" -type:"Layout" -type:"Explorer Map" -type:"Globe Document" -type:"Scene Document" -type:"Published Map" -type:"Map Template" -type:"Windows Mobile Package" -type:"Layer Package" -type:"Explorer Layer" -type:"Geoprocessing Package" -type:"Desktop Application Template" -type:"Code Sample" -type:"Geoprocessing Package" -type:"Geoprocessing Sample" -type:"Locator Package" -type:"Workflow Manager Package" -type:"Windows Mobile Package" -type:"Explorer Add In" -type:"Desktop Add In" -type:"File Geodatabase" -type:"Feature Collection Template" -type:"Code Attachment" -type:"Featured Items" -type:"Symbol Set" -type:"Color Set" -type:"Windows Viewer Add In" -type:"Windows Viewer Configuration"',
+          f: "json",
+          num: 1000
+        };
+
+        esriRequest(url, {
+          responseType: "json",
+          method: "post",
+          query: query
+        }).then(function(response){
+          var i, option;
+          var geoJson = response.data,
+              numRes = response.data.results.length,
+              el = document.getElementById("webmaps");
+
+
+          drawMap(response.data.results[0].id);
+
+          for(var i = 0; i < numRes; i++){
+            option = document.createElement('option');
+            option.value = response.data.results[i].id;
+            option.innerHTML = response.data.results[i].title;
+            el.appendChild(option);
+          }
+          el.onchange = function(elem){
+            drawMap(elem.target.value);
+          }
+
+        });
+        var drawMap = function(id){
+          var webmap = new WebMap({
+            portalItem: {
+              id: id
+            }
+          });
+
+          var view = new MapView({
+            map: webmap,
+            container: "viewDiv",
+            padding: {
+              top: 50
+            }
+          });
+
+          var editBtn = document.getElementById('edit');
+          editBtn.setAttribute("href","https://hhkaos2.maps.arcgis.com/home/webmap/viewer.html?webmap=" + id);
+
+        }
+      });
+    </script>
+  </head>
+  <body class="calcite-maps calcite-nav-top">
+    <nav class="navbar calcite-navbar navbar-fixed-top calcite-text-light calcite-bg-dark">
+      <div class="calcite-title calcite-overflow-hidden">
+        <span class="calcite-title-main">hhkaos2 web maps</span>
+        <span class="calcite-title-divider hidden-xs"></span>
+        <span>
+          <div class="form-group-sm">
+            <select class="form-control" id="webmaps"></select>
+          </div>
+        </span>
+        <span class="calcite-title-divider hidden-xs"></span>
+        <span><a href="#" class="btn btn-success btn-sm" id="edit" target="_blank">Editar</a></span>
+      </div>
+
+    </nav>
+    <div class="calcite-map calcite-map-absolute">
+      <div id="viewDiv"></div>
+      <div id="logo">
+        <a href="http://rauljimenez.info/" target="_blank">
+          <img src="http://rauljimenez.info/img/logo2.png" alt="logo">
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
