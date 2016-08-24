@@ -91,22 +91,6 @@ Ver en [js.arcgis.com](https://developers.arcgis.com/javascript/latest/sample-co
 
 <!-- .slide: class="section" -->
 
-### Web map como: BD + BackOffice + API/ORM
-
-<img src="https://docs.google.com/drawings/d/1OKpYpesHKMcRxxsL-ymvlvHsu-kK1M8HdZmosplzs5M/pub?w=900">
-
----
-
-<!-- .slide: class="section" -->
-
-## Web map como BD
-
-<img src="https://docs.google.com/drawings/d/1b0t92GbRj2Q1xQHeg5_KnWkHkOqsoO9HEG0XLPfHBIo/pub?w=1364&amp;h=653">
-
----
-
-<!-- .slide: class="section" -->
-
 ## Utiliza un webmap cuando...
 
 > Quieras `aumentar la velocidad y reducir las líneas de código` de crear una aplicación
