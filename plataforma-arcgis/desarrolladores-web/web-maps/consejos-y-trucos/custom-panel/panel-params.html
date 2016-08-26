@@ -17,13 +17,17 @@
 
   <!-- get calcite-web js from the cdn (use latest version) -->
   <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.31/js/calcite-web.min.js"></script>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.17/dijit/themes/claro/claro.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.17/esri/css/esri.css">
 
   <style>
     body{
       background-color: white
     }
-
+    .esri-bitmap {
+          max-width: none;
+          transform-origin: top left;
+        }
     html, body, #viewDiv {
       height: 100%; width: 100%; margin: 0; padding: 0;
     }
@@ -32,31 +36,70 @@
     }
   </style>
 
-  <script src="https://js.arcgis.com/4.0/"></script>
+  <script src="https://js.arcgis.com/3.17/"></script>
   <script>
-    require([
-      "esri/views/MapView",
-      "esri/WebMap",
+  require([
+      "dojo/parser",
+      "dojo/ready",
+      "dijit/layout/BorderContainer",
+      "dijit/layout/ContentPane",
+      "dojo/dom",
+      "esri/map",
+      "esri/urlUtils",
+      "esri/arcgis/utils",
+      "esri/dijit/Legend",
+      "esri/dijit/Scalebar",
       "dojo/domReady!"
     ], function(
-      MapView, WebMap
+      parser,
+      ready,
+      BorderContainer,
+      ContentPane,
+      dom,
+      Map,
+      urlUtils,
+      arcgisUtils,
+      Legend,
+      Scalebar
     ) {
+      ready(function(){
 
-      var webmap = new WebMap({
-        portalItem: {
-          id: "6a8fbfd6126142fa90e831e58d0cd902"
-        }
+      parser.parse();
+
+//if accessing webmap from a portal outside of ArcGIS Online, uncomment and replace path with portal URL
+     //arcgisUtils.arcgisUrl = "https://pathto/portal/sharing/content/items";
+      arcgisUtils.createMap("0ad39d05c3834649bb48397afc56a6b2","viewDiv").then(function(response){
+        //update the app
+        dom.byId("title").innerHTML = response.itemInfo.item.title;
+        dom.byId("subtitle").innerHTML = response.itemInfo.item.snippet;
+
+        var map = response.map;
+
+
+
+        //add the scalebar
+        var scalebar = new Scalebar({
+          map: map,
+          scalebarUnit: "english"
+        });
+
+        //add the legend. Note that we use the utility method getLegendLayers to get
+        //the layers to display in the legend from the createMap response.
+        var legendLayers = arcgisUtils.getLegendLayers(response);
+        var legendDijit = new Legend({
+          map: map,
+          layerInfos: legendLayers
+        },"legend");
+        legendDijit.startup();
+
+
       });
 
-      var view = new MapView({
-        map: webmap,
-        container: "viewDiv",
-        padding: {
-          top: 50
-        }
+
       });
 
     });
+  </script>
   </script>
 </head>
 <body>
