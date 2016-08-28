@@ -34,18 +34,201 @@
     #viewDiv{
       height: 500px;
     }
+    .modal-content{
+      max-width: 90%;
+      width: 90%;
+    }
+    .modal-content iframe{
+      width:100%;
+      height:100%;
+      border:1px solid #ccc;
+    }
+
+    path[data-classbreak="custom-style"]{
+      border:1px solid black;
+      fill-opacity: 1;
+      stroke-width: 4;
+      stroke: rgb(220,20,60);
+      stroke-opacity: 1;
+    }
+    .code{
+      font-family: Verdana;
+      font-size: 12px;
+      height: 250px;
+    }
+    .dropdown-content{display:none;}
+
   </style>
+
+
+  <script>
+  var dojoConfig = (function () {
+      return {
+          async: true,
+          isDebug: true,
+          parseOnLoad: false,
+          packages: [
+              {
+                  name: 'jquery',
+                  location: 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1',
+                  main: 'jquery'
+              }
+          ],
+          paths:{
+            "jquery":"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1",
+            "jsrender":"http://www.jsviews.com/download/jsrender"
+          },
+          shim:{
+            deps:["jquery"], // jquery.highlight dependeps on jquery so it will load after jquery has been loaded
+            exports:"jsrender"
+          }
+      };
+  })();
+  </script>
 
   <script src="https://js.arcgis.com/3.17/"></script>
   <script>
+  var map;
   require([
-      "esri/arcgis/utils",
-      "dojo/domReady!"
+      'esri/arcgis/utils',
+      'esri/layers/FeatureLayer',
+      'esri/request',
+      'jquery',
+      'dojo/on',
+      'esri/Color',
+      'esri/renderers/SimpleRenderer',
+      'esri/symbols/SimpleMarkerSymbol',
+      'esri/symbols/SimpleLineSymbol',
+      'jsrender',
+      'dojo/domReady!'
     ], function(
-      arcgisUtils
+      arcgisUtils,
+      FeatureLayer,
+      esriRequest,
+      $,
+      on,
+      Color,
+      SimpleRenderer,
+      SimpleMarkerSymbol,
+      SimpleLineSymbol
     ) {
-      arcgisUtils.createMap("0ad39d05c3834649bb48397afc56a6b2","viewDiv").then(function(response){
-        var map = response.map;
+      var webmapId = '0ad39d05c3834649bb48397afc56a6b2';
+
+      arcgisUtils.createMap(webmapId,'viewDiv').then(function(response){
+        map = response.map;
+
+
+        //debugger;
+        /*
+        var featureLayer = new FeatureLayer("https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Accidental_Deaths/FeatureServer/0", {
+              id:"featureLayer",
+
+              dataAttributes:["Population"]
+            });
+
+            /
+debugger
+        if (featureLayer.surfaceType === "svg") {
+          on(featureLayer, "graphic-draw", function (evt) {
+            evt.node.setAttribute("data-classbreak", "custom-style");
+            var marker = new SimpleMarkerSymbol();
+            marker.setColor(new Color([92, 92, 92, 1]));
+            marker.setAngle(-1);
+            marker.setStyle(SimpleMarkerSymbol.STYLE_SQUARE);
+            evt.graphic.symbol = marker;
+            debugger
+          });
+        }
+        on(map, "load", function (evt) {
+          console.log("loaded")
+        });
+        on(map, "update-end", function (evt) {
+          console.log("loaded")
+        });*/
+        //map.addLayer(featureLayer);
+        //debugger
+
+        /*n=g.getNode()
+        $(n).find("path")*/
+      });
+
+      var url = 'http://www.arcgis.com/sharing/rest/content/items/'+webmapId+'/data';
+
+      applyMarker = function(layerId){
+        var l=map.getLayer(layerId)
+        //l.setVisibility(false);
+
+
+
+
+        // Replace style
+        /*var marker = new SimpleMarkerSymbol();
+        marker.setPath("M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z");
+        marker.setColor(new Color([92, 92, 92, 1]));
+        marker.setAngle(-1);
+        marker.setStyle(SimpleMarkerSymbol.STYLE_PATH);*/
+        // Replace style end
+        eval($('#'+layerId).val());
+
+        var renderer = new SimpleRenderer(marker);
+
+        l.setRenderer(renderer);
+        l.refresh()
+      }
+
+      esriRequest({
+        url: url,
+        content: { f: 'json' },
+        handleAs: 'json'
+      }).then(function(response){
+        console.log('response=',response);
+
+        var template = $.templates("#theTmpl");
+        var optionTmpl = $.templates("#optionTmpl");
+
+        for(var i=0; i< response.operationalLayers.length;i++){
+
+          var data = {
+            'title': response.operationalLayers[i].title,
+            'id': response.operationalLayers[i].id,
+          };
+
+          var htmlOutput = optionTmpl.render(data);
+          $('#dropdown-animation').append(htmlOutput);
+
+          htmlOutput = template.render(data);
+          $('#animations').append(htmlOutput);
+
+          /*$('#animations').append('<div class="accordion-section"><h4 class="accordion-title">'+response.operationalLayers[i].title+'</h4>' +
+          '<div class="accordion-content">'+
+            '<div class="padding-left-1 leader-1 padding-right-1 trailer-1">'+
+              '<textarea>var marker = new SimpleMarkerSymbol();'+
+              'marker.setPath("M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z");'+
+              'marker.setColor(new Color([92, 92, 92, 1]));'+
+              'marker.setAngle(-1);'+
+              'marker.setStyle(SimpleMarkerSymbol.STYLE_PATH);</textarea>'+
+            '</div>'+
+          '</div></div>');*/
+        }
+        $('#dropdown-animation a').click(function(e){
+          e.preventDefault();
+          var id = $(this).data("id");
+          console.log("id=",$(this).data("id"));
+          $("#animations > div").hide();
+          $('#content-'+id).show()
+          console.log("val=",$(this).val());
+        });
+
+
+        /*
+        var featureLayer = new FeatureLayer("https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Accidental_Deaths/FeatureServer/0", {
+              id:"featureLayer",
+              styling:false,
+              dataAttributes:["Population"]
+            });
+        */
+        //https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Accidental_Deaths/FeatureServer/0
+
       });
     });
   </script>
@@ -80,14 +263,31 @@
       <div class="leader-1">
         <aside class="js-accordion accordion trailer-1">
           <div class="accordion-section is-active">
-            <h4 class="accordion-title ">CSV</h4>
+            <h4 class="accordion-title">Animaciones (simbología)</h4>
+            <div class="accordion-content">
+              <div class="padding-left-1 leader-1 padding-right-1 trailer-1">
+                <a class="js-modal-toggle btn trailer-1 btn-fill" href="#" data-modal="foo">Symbol Playground</a>
+                <div class="dropdown js-dropdown">
+                  <!-- extends side-nav -->
+                  <button class="btn btn-transparent dropdown-btn js-dropdown-toggle" tabindex="0" aria-haspopup="true" aria-expanded="false">Selecciona una capa</button>
+                  <!-- extends side-nav -->
+                  <nav class="dropdown-menu modifier-class" role="menu" id="dropdown-animation">
+                    <!-- extends side-nav-link -->
+                  </nav>
+                </div>
+                <div id="animations"></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-section">
+            <h4 class="accordion-title ">Capas personalizadas</h4>
             <div class="accordion-content">
               <fieldset class="fieldset-checkbox padding-left-1 leader-1">
                 <label>
-                  <input type="checkbox"> Weekly Newsletter
+                  <input type="checkbox"> Capa.csv
                 </label>
                 <label>
-                  <input type="checkbox"> Weekly Newsletter
+                  <input type="checkbox"> Capa.kml
                 </label>
                 <label>
                   <input type="checkbox"> Weekly Newsletter
@@ -96,15 +296,12 @@
             </div>
           </div>
           <div class="accordion-section">
-            <h4 class="accordion-title">Add points</h4>
+            <h4 class="accordion-title">Cargar notas de mapa</h4>
             <div class="accordion-content">
-              <p>Stuff!</p>
-            </div>
-          </div>
-          <div class="accordion-section">
-            <h4 class="accordion-title">Title of Third Section</h4>
-            <div class="accordion-content">
-              <p>Stuff!</p>
+              <div class="padding-left-1 leader-1">
+                <p>Add points</p>
+                <small><strong>Recomendación:</strong> <br>Mejor crear un servicio sincronizado en 2º plano.</small>
+              </div>
             </div>
           </div>
         </aside>
@@ -120,6 +317,34 @@
     </div>
   </div>
 
+
+  <div class="js-modal modal-overlay modifier-class" data-modal="foo">
+    <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+      <iframe src="https://developers.arcgis.com/javascript/3/samples/playground/" style="height:500px"></iframe>
+
+      <div class="text-right">
+          <button class="btn js-modal-toggle">okay</button>
+          <button class="btn-clear js-modal-toggle">cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script id="optionTmpl" type="text/x-jsrender">
+    <a href="#" class="dropdown-link" data-id="{{:id}}" role="menu-item">{{:title}}</a>
+  </script>
+
+  <script id="theTmpl" type="text/x-jsrender">
+
+        <div class="padding-left-1 leader-1 padding-right-1 trailer-1 dropdown-content" id="content-{{:id}}">
+          {{:title}}
+          <textarea class="code" id="{{:id}}">var marker = new SimpleMarkerSymbol();
+marker.setPath("M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z");
+marker.setColor(new Color([92, 92, 92, 1]));
+marker.setAngle(-1);
+marker.setStyle(SimpleMarkerSymbol.STYLE_PATH);</textarea>
+          <button class="btn btn-green btn-fill btn-small" onclick="applyMarker('{{:id}}')">Aplicar</button>
+        </div>
+  </script>
   <!-- interactive patterns need to be initialized -->
   <script>
   calcite.init()
