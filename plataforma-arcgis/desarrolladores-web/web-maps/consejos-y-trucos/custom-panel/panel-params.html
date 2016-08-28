@@ -25,9 +25,9 @@
       background-color: white
     }
     .esri-bitmap {
-          max-width: none;
-          transform-origin: top left;
-        }
+      max-width: none;
+      transform-origin: top left;
+    }
     html, body, #viewDiv {
       height: 100%; width: 100%; margin: 0; padding: 0;
     }
@@ -59,7 +59,6 @@
     .dropdown-content{display:none;}
 
   </style>
-
 
   <script>
   var dojoConfig = (function () {
@@ -99,6 +98,7 @@
       'esri/renderers/SimpleRenderer',
       'esri/symbols/SimpleMarkerSymbol',
       'esri/symbols/SimpleLineSymbol',
+      'esri/symbols/SimpleFillSymbol',
       'jsrender',
       'dojo/domReady!'
     ], function(
@@ -110,64 +110,23 @@
       Color,
       SimpleRenderer,
       SimpleMarkerSymbol,
-      SimpleLineSymbol
+      SimpleLineSymbol,
+      SimpleFillSymbol
     ) {
       var webmapId = '0ad39d05c3834649bb48397afc56a6b2';
 
       arcgisUtils.createMap(webmapId,'viewDiv').then(function(response){
         map = response.map;
-
-
-        //debugger;
-        /*
-        var featureLayer = new FeatureLayer("https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Accidental_Deaths/FeatureServer/0", {
-              id:"featureLayer",
-
-              dataAttributes:["Population"]
-            });
-
-            /
-debugger
-        if (featureLayer.surfaceType === "svg") {
-          on(featureLayer, "graphic-draw", function (evt) {
-            evt.node.setAttribute("data-classbreak", "custom-style");
-            var marker = new SimpleMarkerSymbol();
-            marker.setColor(new Color([92, 92, 92, 1]));
-            marker.setAngle(-1);
-            marker.setStyle(SimpleMarkerSymbol.STYLE_SQUARE);
-            evt.graphic.symbol = marker;
-            debugger
-          });
-        }
-        on(map, "load", function (evt) {
-          console.log("loaded")
-        });
-        on(map, "update-end", function (evt) {
-          console.log("loaded")
-        });*/
-        //map.addLayer(featureLayer);
-        //debugger
-
-        /*n=g.getNode()
-        $(n).find("path")*/
       });
 
       var url = 'http://www.arcgis.com/sharing/rest/content/items/'+webmapId+'/data';
 
       applyMarker = function(layerId){
         var l=map.getLayer(layerId)
-        //l.setVisibility(false);
+        if(!l){
+          l=map.getLayer(layerId+"_0");
+        }
 
-
-
-
-        // Replace style
-        /*var marker = new SimpleMarkerSymbol();
-        marker.setPath("M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z");
-        marker.setColor(new Color([92, 92, 92, 1]));
-        marker.setAngle(-1);
-        marker.setStyle(SimpleMarkerSymbol.STYLE_PATH);*/
-        // Replace style end
         eval($('#'+layerId).val());
 
         var renderer = new SimpleRenderer(marker);
@@ -192,6 +151,11 @@ debugger
             'title': response.operationalLayers[i].title,
             'id': response.operationalLayers[i].id,
           };
+          if(response.operationalLayers[i].featureCollection){
+            data.type = "featureCollection";
+          }else{
+            data.type = "featureLayer";
+          }
 
           var htmlOutput = optionTmpl.render(data);
           $('#dropdown-animation').append(htmlOutput);
@@ -199,16 +163,6 @@ debugger
           htmlOutput = template.render(data);
           $('#animations').append(htmlOutput);
 
-          /*$('#animations').append('<div class="accordion-section"><h4 class="accordion-title">'+response.operationalLayers[i].title+'</h4>' +
-          '<div class="accordion-content">'+
-            '<div class="padding-left-1 leader-1 padding-right-1 trailer-1">'+
-              '<textarea>var marker = new SimpleMarkerSymbol();'+
-              'marker.setPath("M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z");'+
-              'marker.setColor(new Color([92, 92, 92, 1]));'+
-              'marker.setAngle(-1);'+
-              'marker.setStyle(SimpleMarkerSymbol.STYLE_PATH);</textarea>'+
-            '</div>'+
-          '</div></div>');*/
         }
         $('#dropdown-animation a').click(function(e){
           e.preventDefault();
@@ -219,15 +173,6 @@ debugger
           console.log("val=",$(this).val());
         });
 
-
-        /*
-        var featureLayer = new FeatureLayer("https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Accidental_Deaths/FeatureServer/0", {
-              id:"featureLayer",
-              styling:false,
-              dataAttributes:["Population"]
-            });
-        */
-        //https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Accidental_Deaths/FeatureServer/0
 
       });
     });
@@ -337,15 +282,19 @@ debugger
 
         <div class="padding-left-1 leader-1 padding-right-1 trailer-1 dropdown-content" id="content-{{:id}}">
           {{:title}}
+          {{if type=="featureLayer"}}
           <textarea class="code" id="{{:id}}">var marker = new SimpleMarkerSymbol();
 marker.setPath("M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z");
 marker.setColor(new Color([92, 92, 92, 1]));
 marker.setAngle(-1);
 marker.setStyle(SimpleMarkerSymbol.STYLE_PATH);</textarea>
+          {{else type=="featureCollection"}}
+          <textarea class="code" id="{{:id}}">var marker = new SimpleFillSymbol();</textarea>
+          {{/if}}
           <button class="btn btn-green btn-fill btn-small" onclick="applyMarker('{{:id}}')">Aplicar</button>
         </div>
   </script>
-  <!-- interactive patterns need to be initialized -->
+
   <script>
   calcite.init()
   </script>
