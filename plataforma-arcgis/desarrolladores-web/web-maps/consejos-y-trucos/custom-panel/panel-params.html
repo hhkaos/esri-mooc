@@ -99,6 +99,8 @@
       'esri/symbols/SimpleMarkerSymbol',
       'esri/symbols/SimpleLineSymbol',
       'esri/symbols/SimpleFillSymbol',
+      'esri/layers/CSVLayer',
+      'esri/layers/KMLLayer',
       'jsrender',
       'dojo/domReady!'
     ], function(
@@ -111,20 +113,50 @@
       SimpleRenderer,
       SimpleMarkerSymbol,
       SimpleLineSymbol,
-      SimpleFillSymbol
+      SimpleFillSymbol,
+      CSVLayer,
+      KMLLayer
     ) {
       var webmapId = '0ad39d05c3834649bb48397afc56a6b2';
 
       arcgisUtils.createMap(webmapId,'viewDiv').then(function(response){
         map = response.map;
+
+        csv = new CSVLayer('csv/playas.csv',{
+              columnDelimiter: ',',
+              latitudeFieldName: 'lat',
+              longitudeFieldName: 'long',
+              id: 'csv'
+        });
+        map.addLayer(csv);
+        csv.setVisibility(false);
+
+        kml = new KMLLayer('https://developers.google.com/kml/documentation/KML_Samples.kml',{id: 'kml'});
+        map.addLayer(kml);
+        kml.setVisibility(false);
       });
 
-      var url = 'http://www.arcgis.com/sharing/rest/content/items/'+webmapId+'/data';
+      $('#csv').click(function(){
+        if($(this).is(':checked')){
+          map.getLayer('csv').setVisibility(true);
+        }else{
+          map.getLayer('csv').setVisibility(false);
+        }
+      });
+      $('#kml').click(function(){
+        if($(this).is(':checked')){
+          map.getLayer('kml').setVisibility(true);
+        }else{
+          map.getLayer('kml').setVisibility(false);
+        }
+      });
+
+      var url = 'http://www.arcgis.com/sharing/rest/content/items/' + webmapId + '/data';
 
       applyMarker = function(layerId){
-        var l=map.getLayer(layerId)
+        var l = map.getLayer(layerId);
         if(!l){
-          l=map.getLayer(layerId+"_0");
+          l=map.getLayer(layerId+'_0');
         }
 
         eval($('#'+layerId).val());
@@ -132,7 +164,7 @@
         var renderer = new SimpleRenderer(marker);
 
         l.setRenderer(renderer);
-        l.refresh()
+        l.refresh();
       }
 
       esriRequest({
@@ -142,19 +174,19 @@
       }).then(function(response){
         console.log('response=',response);
 
-        var template = $.templates("#theTmpl");
-        var optionTmpl = $.templates("#optionTmpl");
+        var template = $.templates('#theTmpl');
+        var optionTmpl = $.templates('#optionTmpl');
 
         for(var i=0; i< response.operationalLayers.length;i++){
 
           var data = {
             'title': response.operationalLayers[i].title,
-            'id': response.operationalLayers[i].id,
+            'id': response.operationalLayers[i].id
           };
           if(response.operationalLayers[i].featureCollection){
-            data.type = "featureCollection";
+            data.type = 'featureCollection';
           }else{
-            data.type = "featureLayer";
+            data.type = 'featureLayer';
           }
 
           var htmlOutput = optionTmpl.render(data);
@@ -166,11 +198,9 @@
         }
         $('#dropdown-animation a').click(function(e){
           e.preventDefault();
-          var id = $(this).data("id");
-          console.log("id=",$(this).data("id"));
-          $("#animations > div").hide();
-          $('#content-'+id).show()
-          console.log("val=",$(this).val());
+          var id = $(this).data('id');
+          $('#animations > div').hide();
+          $('#content-'+id).show();
         });
 
 
@@ -236,13 +266,10 @@
             <div class="accordion-content">
               <fieldset class="fieldset-checkbox padding-left-1 leader-1">
                 <label>
-                  <input type="checkbox"> Capa.csv
+                  <input type="checkbox" id="csv"> Playas de mayorca (CSV)
                 </label>
                 <label>
-                  <input type="checkbox"> Capa.kml
-                </label>
-                <label>
-                  <input type="checkbox"> Weekly Newsletter
+                  <input type="checkbox" id="kml"> KML Sample (KML)
                 </label>
               </fieldset>
             </div>
@@ -250,15 +277,15 @@
           <div class="accordion-section">
             <h4 class="accordion-title">Cargar notas de mapa</h4>
             <div class="accordion-content">
-              <div class="padding-left-1 leader-1">
-                <p>Add points</p>
+              <div class="padding-left-1 leader-1 padding-right-1">
+                <span class="btn btn-fill trailer-1 btn-green">Add customers (pending)</span>
                 <small><strong>Recomendación:</strong> <br>Mejor crear un servicio sincronizado en 2º plano.</small>
               </div>
             </div>
           </div>
         </aside>
       </div>
-      <button class="btn btn-primary btn-fill">Save</button>
+      <button class="btn btn-primary btn-fill trailer-1">Save</button>
     </div>
     <div class="column-16">
 
