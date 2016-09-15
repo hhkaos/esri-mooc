@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-## Cómo crear, editar y consumir web maps
+## Manipular web maps
 Plataforma ArcGIS para desarrolladores web
 
 [desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)
