@@ -8,6 +8,19 @@ Plataforma ArcGIS para desarrolladores web
 ---
 
 <!-- .slide: class="section" -->
+## Presentación
+[Raúl Jiménez Ortega](https://es.linkedin.com/in/jimenezortegaraul)
+
+[![Raul Jimenez]](../../images/raul-jimenez.png)](https://www.certmetrics.com/esri/public/badge.aspx?i=35&t=c&d=2016-07-15&ci=ESRI00113213)
+
+Responsable del programa de <br>
+desarrolladores y startups de Esri España
+
+
+
+---
+
+<!-- .slide: class="section" -->
 ## A quién va dirigido
 
 > Este curso está dirigido a **desarrolladores web con conocimientos en GIS**
