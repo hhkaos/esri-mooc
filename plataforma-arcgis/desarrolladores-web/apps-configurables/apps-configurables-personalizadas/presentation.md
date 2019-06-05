@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-## Plantillas configurables
+## Apps configurables personalizadas
 Plataforma ArcGIS para desarrolladores web
 
 [desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)

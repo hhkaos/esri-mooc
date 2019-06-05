@@ -68,10 +68,19 @@ el web map como modelo de datos geográficos.
 
 ## Extendiendo con BD propia
 
-<iframe src="custom-panel/panel-extension.html" style="width:100%;height:550px"></iframe>
+<iframe src="https://esri-es.github.io/webmap-extension-panel-sample/" style="width:100%;height:550px"></iframe>
 
 Ver código fuente: [iframe](https://github.com/esri-es/moocs/blob/gh-pages/plataforma-arcgis/desarrolladores-web/web-maps/consejos-y-trucos/custom-panel/panel-extension.html#L53) | [otros parámetros](https://github.com/esri-es/moocs/blob/gh-pages/plataforma-arcgis/desarrolladores-web/web-maps/consejos-y-trucos/custom-panel/panel-params.html) | [formulario](https://github.com/esri-es/moocs/blob/gh-pages/plataforma-arcgis/desarrolladores-web/web-maps/consejos-y-trucos/custom-panel/panel-extension-form.html#L23)
 
+---
+
+<!-- .slide: class="section" -->
+
+## Previsualización de un feature layer
+
+Smartmapping, simbología, ...
+
+https://arcgis-devlabs.maps.arcgis.com/home/webmap/viewer.html?embedded=1&type=itemDetail&layers=883cedb8c9fe4524b64d47666ed234a7&layerId=0
 ---
 
 <!-- .slide: class="questions centered" -->

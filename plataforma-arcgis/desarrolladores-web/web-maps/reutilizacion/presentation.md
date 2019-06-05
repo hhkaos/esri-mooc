@@ -1,6 +1,6 @@
 <!-- .slide: class="title" -->
 
-## Apps Configurables creadas por Esri
+## Reutilización de web maps
 Plataforma ArcGIS para desarrolladores web
 
 [desarrolladores.esri.es/moocs](http://desarrolladores.esri.es/moocs)
@@ -9,12 +9,21 @@ Plataforma ArcGIS para desarrolladores web
 
 <!-- .slide: class="section" -->
 
-## Qué es una plantilla
+## Referencias
 
-Storymaps con tutoriales
-https://storymaps.arcgis.com/en/app-list/
+* Collector
+* Configurable apps / Storymaps
+* Navigator
+* ArcGIS Online
+* ArcGIS Pro
 
-* [Plantillas incluidas en ArcGIS Online y Portal](http://www.arcgis.com/home/search.html?q=tags%3AArcGIS%20web%20application%20template%20owner%3Aesri_en&t=content&sortField=modified&sortOrder=desc)
+---
+
+<!-- .slide: class="section" -->
+
+## Referencias
+* [Índice de propiedades](https://developers.arcgis.com/web-map-specification/objects/)
+* [web-scene-sample.json](web-scene-sample.json)
 
 ---
 

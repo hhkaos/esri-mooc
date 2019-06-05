@@ -23,9 +23,9 @@ desarrolladores y startups de Esri España
 <!-- .slide: class="section" -->
 ## A quién va dirigido
 
-> Este curso está dirigido a **desarrolladores web con conocimientos en GIS**
+> Este curso está dirigido a **desarrolladores web con conocimientos en ArcGIS**
 que quieran adquirir o mejorar habilidades para sacarle el máximo provecho
-<br>a la plataforma ArcGIS
+<br>a la plataforma
 
 ---
 
@@ -68,6 +68,10 @@ con tener **conocimientos básicos** de:
 
 <!-- .slide: class="section" -->
 ## Metodología
+
+* Lecciones en video
+* Tests de auto evaluación
+* Ejercicios propuestos
 
 ---
 

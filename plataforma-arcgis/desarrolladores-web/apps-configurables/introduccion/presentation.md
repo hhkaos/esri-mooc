@@ -19,10 +19,10 @@ que permite a usuarios de una organización crear y configurar
 
 <!-- .slide: class="section" -->
 
-## Demo
+## [Demo](http://www.arcgis.com/home/webmap/viewer.html?url=https://services1.arcgis.com/nCKYwcSONQTkPA4K/ArcGIS/rest/services/ServicioSanitariosGalicia/FeatureServer/1&source=sd)
 
 > Crear una aplicación lista para usar a partir de la app configurable
-"**Basic Viewer**" desde el editor de mapa
+"**Basic Viewer**" desde el editor de mapa.
 
 ---
 
@@ -45,11 +45,15 @@ y viene determinada por el autor de la misma.
 * Estas apps tienen como objetivo:
 
 	1. **Aumentar la independencia** de los usuarios no<br>
-		desarrolladores pudiendo crear ellos mismos<br> aplicaciones web que cubran necesidades <br>frecuentes de la organización.
+		desarrolladores dándoles la posibilidad de crear<br> aplicaciones web que cubran necesidades <br>frecuentes de la organización.
 
 	2. **Mejorar la productividad** del equipo de <br>
 	desarrollo permitiéndoles centrarse en crear <br>
-	aplicaciones que resuelvan nuevas necesidades
+	aplicaciones que resuelvan **nuevas** necesidades
+
+	3. Acortar el tiempo de desarrollo proporcionando el <br>
+		 código fuente (repo en Github & ZIP) que puede ser <br>
+		 extendida y personalizada con modificaciones propias
 
 ---
 
@@ -80,7 +84,7 @@ plantillas o incluir otras nuevas en la organización.
 ## Formas de configurar una app
 
 > Para configurar una **aplicación lista para usar** a partir de una app configurable
-necesitamos crear un item en la organización para almacenar los parametros.
+necesitamos crear un item en la organización para almacenar los parámetros.
 
 * Esto se puede hacer de tres formas:
 	* Desde la interfaz web del [Editor de mapa](http://www.arcgis.com/home/webmap/viewer.html) (visto)
@@ -114,7 +118,7 @@ suele utilizar como base en el código de la plantilla.
 
 ## Otras referencias
 
-* [Plantillas incluidas en ArcGIS Online y Portal](http://www.arcgis.com/home/search.html?t=content&q=tags:ArcGIS%20web%20application%20template)
+* [Plantillas incluidas en ArcGIS Online y Portal](http://www.arcgis.com/home/search.html?q=tags%3AArcGIS%20web%20application%20template%20owner%3Aesri_en&t=content&sortField=modified&sortOrder=desc)
 * [Cómo crear aplicaciones web a partir de webmaps](https://doc.arcgis.com/en/arcgis-online/create-maps/create-map-apps.htm)
 * [Crear items usando la API REST](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Add_Item/02r30000008q000000/)
 * [Más sobre storymaps](https://storymaps.arcgis.com/)
